@@ -1,0 +1,389 @@
+html {
+	min-height: 100%;
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.cd-fixed-bg {
+	background-color: rgb(233, 231, 236)
+}
+
+#content_wrapper {
+	height: 100%;
+	width: 974px;
+	padding: 0;
+	margin: 0;
+	left: 24%;
+}
+
+#header {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	width: 100%;
+	background: #333;
+	/*background-image: linear-gradient(top, #555555 0%,#515151 18%,#373737 85%,#333333 100%);
+	background-image: -o-linear-gradient(top, #555555 0%,#515151 18%,#373737 85%,#333333 100%);
+	background-image: -moz-linear-gradient(top, #555555 0%,#515151 18%,#373737 85%,#333333 100%);
+	background-image: -webkit-linear-gradient(top, #555555 0%,#515151 18%,#373737 85%,#333333 100%);*/
+	background-image: linear-gradient(top, #696969 0%, #3f3f3f 100%);
+	background-image: -o-linear-gradient(top, #696969 0%, #3f3f3f 100%);
+	background-image: -moz-linear-gradient(top, #696969 0%, #3f3f3f 100%);
+	background-image: -webkit-linear-gradient(top, #696969 0%, #3f3f3f 100%);
+}
+
+#top_bar {
+	top: 0;
+	width: 100%;
+	position: fixed;
+	height: 42px;
+	z-index: 10001;
+	font-size: 13px;
+	line-height: 17px;
+	color: #333;
+	font-weight: normal;
+	z-index: 2;
+	position: relative;
+	/*background-color: #3f3f3f;
+	background-image: -webkit-linear-gradient(top, #696969 0%, #3f3f3f 100%);*/
+}
+
+.responsive-nav {
+	height: 29px;
+	background-color: #1a1a1a;
+	background-image: -webkit-linear-gradient(top, #1a1a1a 0%, #303030 100%);
+	background-image: -moz-linear-gradient(top, #1a1a1a 0%, #303030 100%);
+	background-image: -o-linear-gradient(top, #1a1a1a 0%, #303030 100%);
+	background-image: linear-gradient(top, #1a1a1a 0%, #303030 100%);
+	padding-left: 42px;
+}
+
+.wrapper {
+	clear: both;
+}
+
+.global-header .wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1080px;
+	height: 42px;
+	position: relative;
+}
+
+.header-section.first-child {
+	width: auto;
+	float: left;
+	width: 750px;
+}
+
+.header-section .logo-container {
+	margin: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	border-bottom: none;
+	float: left;
+}
+
+h2 {
+	display: block;
+	-webkit-margin-before: 0.83em;
+	-webkit-margin-after: 0.83em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+.nav-v5-2-header #in-logo {
+	margin-left: 0px;
+	margin-right: 5px;
+}
+
+#in-logo {
+	text-indent: -119988px;
+	overflow: hidden;
+	text-align: left;
+	margin-top: 3px;
+	background: url('linkedin_logo.png') left center no-repeat;
+	display: block;
+	height: 36px;
+	width: 44px;
+	position: relative;
+	left: -1px;
+	float: left;
+}
+
+.global-search {
+	padding: 2px 0 6px;
+	float: left;
+	margin-left: 150px;
+	height: 5px;
+}
+
+.search-box-container {
+	border-radius: 0 2px 2px 0;
+	border: none;
+	width: 335px;
+	background: #fff;
+	float: left;
+	height: 25px;
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	padding-left: 10px;
+	display: inline-block;
+}
+
+.search-button {
+	font-weight: bold;
+	border-width: 1px;
+	border-style: solid;
+	cursor: pointer;
+	margin: 0;
+	text-decoration: none !important;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.35);
+	border-radius: 3px;
+	padding: 0 13px;
+	box-sizing: border-box;
+	font-size: 13px;
+	color: #fff;
+	background-color: #287bbc;
+	border-color: #1b5480;
+	background-image: -webkit-linear-gradient(top, #287bbc 0%, #23639a 100%);
+	white-space: nowrap;
+	display: inline-block;
+	zoom: 1;
+	vertical-align: middle;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding-left: 3px;
+	padding-right: 3px;
+	float: left;
+	height: 27px;
+	line-height: 25px;
+	overflow: hidden;
+	width: 50px;
+}
+
+.search-scope {
+	float: left;
+	z-index: 10005;
+}
+
+.label {
+	background: #575757;
+	background-image: -webkit-linear-gradient(top, #888888 0%, #888888 4%, #575757 100%);
+	background-image: -moz-linear-gradient(top, #888888 0%, #88888 4%, #575757 100%);
+	background-image: -o-linear-gradient(top, #888888 0%, #888888 4%, #575757 100%);
+	background-image: -linear-gradient(top, #888888 0%, #888888 4%, #575757 100%);
+	border-radius: 2px 0 0 2px;
+	-webkit-border-radius: 2px 0 0 2px;
+	-moz-border-radius: 2px 0 0 2px;
+	-ms-border-radius: 2px 0 0 2px;
+	-o-border-radius: 2px 0 0 2px;
+	height: 27px;
+	width: 40px;
+}
+
+.search-selector {
+	z-index: 10006;
+	border-top: 0;
+	position: fixed !important;
+	top: 40px !important;
+	opacity: 0;
+	transition: all 0.4s ease-in-out;
+	clip: rec(1px, 1px, 1px, 1px);
+	height: 27px;
+	width: 27px;
+	line-height: 0;
+	overflow: hidden;
+	background: url('hamburger_bar_icon3.png') left center no-repeat;
+	border: none;
+}
+
+.advanced-search-outer {
+	display: table;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-left: -5px;
+	margin-right: 5px;
+	height: 40px;
+	width: 50px;
+	word-break: break-all;
+	float: left;
+}
+
+.advanced-search-inner {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.advanced-search {
+	display: table-cell;
+	vertical-align: middle;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	color: #D7D7D7;
+	font-size: 11px;
+	line-height: 11px;
+	text-decoration: none;
+	font-family: sans-serif;
+}
+
+a:hover {
+	color: #2E8BD3;
+	-webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.header-section.last-child {
+	float: left;
+	width: auto;
+	margin-left: 25px;
+	position: relative;
+	height: 42px;
+	width: 203px;
+}
+
+.utilities {
+	margin-left: 0px;
+	margin-right: -5px;
+	height: 42px;
+	float: left;
+	overflow: hidden;
+}
+
+ol, ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.utilities-tab {
+	float: left;
+}
+
+.utilities-tab-item {
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	margin-left: 15px;
+}
+
+.utilities-tab > a:hover {
+	background-color: #252525;
+}
+
+nav.menu .arrow {
+	font-size: 15px;
+	line-height: 0%;
+	color: #D7D7D7;
+}
+
+nav.menu > ul {
+	text-align: left;
+	display: inline;
+	margin: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	list-style: none;
+	color: #D7D7D7;
+}
+
+nav.menu > ul:hover {
+	color: #D7D7D7;
+}
+
+nav.menu > ul > li {
+	font-size: 13px;
+	font-family: sans-serif;
+	display: inline-block;
+	margin-right: -4px;
+	position: relative;
+	padding: 8px 20px;
+	color: #D7D7D7;
+	/*background-image: -webkit-linear-gradient(top, #F7F7F7, #D7D7D7);
+	background-image: -moz-linear-gradient(top, #F7F7F7, #D7D7D7);
+	background-image: -ms-linear-gradient(top, #F7F7F7, #D7D7D7);
+	background-image: -o-linear-gradient(top, #F7F7F7, #D7D7D7);
+	background-image: linear-gradient(to bottom, #F7F7F7, #D7D7D7);*/
+	cursor: pointer;
+}
+
+nav.menu > ul > li:hover {
+	/*background-image: -webkit-linear-gradient(top, #2B4F75, #0F3359);
+	background-image: -moz-linear-gradient(top, #2B4F75, #0F3359);
+	background-image: -ms-linear-gradient(top, #2B4F75, #0F3359);
+	background-image: -o-linear-gradient(top, #2B4F75, #0F3359);
+	background-image: linear-gradient(to bottom, #2B4F75, #0F3359);*/
+	color: #287bbc;
+}
+
+/* modify the submenu overall */
+nav.menu > ul > li > ul {
+	padding: 0;
+	position: absolute;
+	top: 25px;
+	left: 0;
+	width: 160%;
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	color: #D7D7D7;
+	-webkit-box-shadow: 0 0 10px #333;
+	-moz-box-shadow: 0 0 10px #333;
+	box-shadow: 0 0 10px #333;
+	clip: rect(1px, 1px 1px, 1px);
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+/* modify the submenu individual items */
+nav.menu > ul > li > ul > li, ul > li > ul > li > a, ul > li > ul > li > a:visited { 
+	background: #333;
+	display: block;
+	color: #FFFFFF;
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+nav.menu > ul > li > ul > li:hover > a {
+	/*background-image: -webkit-linear-gradient(top, #2B4F75, #0F3359);
+	background-image: -moz-linear-gradient(top, #2B4F75, #0F3359);
+	background-image: -ms-linear-gradient(top, #2B4F75, #0F3359);
+	background-image: -o-linear-gradient(top, #2B4F75, #0F3359);
+	background-image: linear-gradient(to bottom, #2B4F75, #0F3359);*/
+	color: #287bbc;
+}
+
+nav.menu > ul > li:hover > ul {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+	color: #D7D7D7;
+}
+
+nav.menu > ul > li > a, ul > li > a:visited {
+	color: #D7D7D7;
+}
+
+nav.menu > ul > li:hover > a, ul > li > a:hover {
+	color: #287bbc;
+}
+
+a {
+	text-decoration: none;
+}
