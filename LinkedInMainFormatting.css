@@ -9,7 +9,98 @@ body {
 	height: 100%;
 	padding: 0;
 	margin: 0;
+    //float: left;
+    //width: 646px;
+	//height: 100%;
+	//width: 974px;
+	//padding: 0;
+	//margin: 0;
+	//left: 13%;
 }
+
+h3 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+#main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    position: relative;
+}
+
+#identity-container {
+    margin-bottom: 10px;
+}
+
+#identity {
+    position: relative;
+    overflow: hidden;
+}
+
+#identity .photo {
+    float: left;
+    height: 100px;
+    width: 100px;
+    padding: 0;
+    border: none;
+}
+
+#identity .info {
+    height: 100px;
+    margin-left: 105px;
+}
+
+#identity .info .name {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #434649;
+    padding-top: 5px;
+    max-height: 24px;
+}
+
+#identity .info .headline {
+    font-size: 12px;
+    line-height: 14px;
+    color: #66696a;
+    max-height: 14px;
+}
+
+#identity .info .profile-view {
+
+	position:absolute;
+	bottom:20px;
+}
+
+#identity .member {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 370px;
+    float: left;
+    border-right: 1px solid #ddd;
+}
+
+#identity .stats {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: 276px;
+    padding: 0 15px;
+    font-size: 13px;
+    line-height: 17px;
+    color: #66696a;
+    font-weight: normal;
+}
+
 
 .cd-fixed-bg {
 	background-color: rgb(233, 231, 236)
@@ -20,7 +111,7 @@ body {
 	width: 974px;
 	padding: 0;
 	margin: 0;
-	left: 24%;
+	left: 13%;
 }
 
 #header {
@@ -352,7 +443,7 @@ nav.menu > ul > li > ul {
 }
 
 /* modify the submenu individual items */
-nav.menu > ul > li > ul > li, ul > li > ul > li > a, ul > li > ul > li > a:visited { 
+nav.menu > ul > li > ul > li, ul > li > ul > li > a, ul > li > ul > li > a:visited {
 	background: #333;
 	display: block;
 	color: #FFFFFF;
