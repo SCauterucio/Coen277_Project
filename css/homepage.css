@@ -10,7 +10,7 @@ h3 {
 #main {
     margin-left: auto;
     margin-right: auto;
-    width: 1000px;
+    width: 600px;
     position: absolute;
 	top: 80px;
 	left:13%;
@@ -18,46 +18,12 @@ h3 {
 
 #identity-container {
     margin-bottom: 10px;
+	background:white;
 }
 
 #identity {
     position: relative;
     overflow: hidden;
-}
-
-#identity .photo {
-    float: left;
-    height: 100px;
-    width: 100px;
-    padding: 0;
-    border: none;
-}
-
-#identity .info {
-    height: 100px;
-    margin-left: 105px;
-}
-
-#identity .info .name {
-    font-size: 18px;
-    font-weight: normal;
-    line-height: 22px;
-    color: #434649;
-    padding-top: 5px;
-    max-height: 24px;
-}
-
-#identity .info .headline {
-    font-size: 12px;
-    line-height: 14px;
-    color: #66696a;
-    max-height: 14px;
-}
-
-#identity .info .profile-view {
-
-	position:absolute;
-	bottom:20px;
 }
 
 #identity .member {
@@ -70,16 +36,62 @@ h3 {
     border-right: 1px solid #ddd;
 }
 
-#identity .stats {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+#identity .photo {
     float: left;
-    width: 276px;
-    padding: 0 15px;
-    font-size: 13px;
-    line-height: 17px;
-    color: #66696a;
-    font-weight: normal;
+    height: 100px;
+    width: 100px;
+    padding: 0;
+    border: none;
 }
+
+#identity .name-title {
+    height: 100px;
+    margin-left: 105px;
+}
+
+#identity .name-title .name {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #434649;
+    padding-top: 5px;
+    max-height: 24px;
+}
+
+#identity .name-title .job-title {
+    font-size: 12px;
+    line-height: 14px;
+    color: #66696a;
+    max-height: 14px;
+}
+
+#identity .name-title .profile-view {
+
+	position:absolute;
+	bottom:20px;
+}
+
+#options {
+	
+	position:relative;
+	top:10px;
+}
+
+#options .button {
+
+	background:none;
+    border: solid;
+	border-width:1px;
+    color: black;
+    padding: 2px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 25px;
+    cursor: pointer;
+	width:125px;
+}
+}
+
 
