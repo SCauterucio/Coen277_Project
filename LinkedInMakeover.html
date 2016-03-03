@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
-<link rel="stylesheet" type="text/css" href="LinkedInMainFormatting.css">
+<link rel="stylesheet" type="text/css" href="css/LinkedInMainFormatting.css">
+<link rel="stylesheet" type="text/css" href="css/homepage.css">
 <meta charset="ISO-8859-1">
 <title>LinkedIn Makeover</title>
 </head>
@@ -10,6 +11,40 @@
 	<script type="text/javascript" src="LinkedInMainJS.js"></script>
 
 
+	<div id="main">
+		<div id="identity-container">
+			<div id="identity">
+				<section class="member">
+					<div>
+						<a href="https://www.linkedin.com/profile/view?id=AAMAAAHwIKcB1cWjWM-s9J6zRf4MOgCqnWUpgRI&amp;trk=hp-identity-photo" class="photo"><img alt="Stephen Cauterucio" src="https://media.licdn.com/mpr/mpr/shrink_100_100/AAEAAQAAAAAAAAZXAAAAJDFlNWM3NTM0LTEzNDQtNDEwZi1iMTkyLWRlNDI5NzE5ZDIxZg.jpg" height="100" width="100"></a>
+						<div class="info">
+							<h3><a href="https://www.linkedin.com/profile/view?id=AAMAAAHwIKcB1cWjWM-s9J6zRf4MOgCqnWUpgRI&amp;trk=hp-identity-name" class="name" dir="ltr">Stephen Cauterucio</a></h3>
+							<h3><a href="https://www.linkedin.com/profile/view?id=AAMAAAHwIKcB1cWjWM-s9J6zRf4MOgCqnWUpgRI&amp;trk=hp-identity-headline" class="headline"> Security Firmware Engineer at HGST</a></h3>
+
+							<a href="" class="profile-view">Viewed by 9 people in last week</a>
+						</div>
+					</div>
+			<!--
+				</section>
+				<div class="stats " data-li-utrk-module="eyJwIjoib3otd2lubmVyIiwiYyI6IjYyQkU4NzQxMjFBMjM3MTRDMEMxNThDOTJBMkIwMDAwIiwibSI6ImhvbWU6aWRlbnRpdHkiLCJuIjoiMCJ9">
+					<section data-li-lego-trk-status="fired" data-li-utrk-impr_fired="" class="summary" data-li-utrk-el="eyJzIjoiT1JHQU5JQyIsImMiOiJleUoxYVVWc1pXMWxiblFpT2lKcFpHVnVkR2wwZVZkV1RWQWlmUVxyXG4iLCJ1IjoidXJuOmxpOm1lbWJlciIsImciOiJPVEhFUiJ9" data-block="lego" data-li-lego-trk-token="0OfmlWqldVomNMsSBA9z0Kc3RBsCZzkTsCfn9xk6NBkDsCfmhLjmNBkDsCcjRApnhPpnlNpl9JtmUCjAZ9l4BjjR0Zuk9OpmhOjThBpShFtOpMrnpTnTBQqnhKpmhFnTFLfmh9t6lDp6BT9z0ZrCZFt6BPrR1QpmtAqnsCc2UMfmlOrSdjsCsCfn9xk6NBkD9D9zRArQRIpl9OpOoMfmVLqnhFsSZgs7lLsCsCejAVejAZp6lQsSlRsmlirnles7lLsCsCs6RStPRAin1RrT9D9AVfilh9kQZgfnB2sClAsCYCsClHpmlPnS9LqzRAinhKpmRDpncCunhFt6VBp6BvuCYZp4BQrSNP9DhItm5CpmgZp4BQtmZVomMCsClKrCBTbnFLfmlJokVBpS5M9D1JrzRAin1MoioNe3gQcjRAimVLqndOpnoCdj4Od34RczcZp4BR9AgP9kgP9k51gndFiQFGlDt1l7xeqktjkkwSsBAZp4BQu6lQrCZz" data-li-lego-action="PRIMARY_ACTION" data-li-lego-action-name="click"><a href="https://www.linkedin.com/wvmx/profile?trk=hp-identity-wvmp" data-li-auto-click-utrki="u=identityWVMP&amp;n=viewWVMP&amp;y=CLICK"><span class="num">8</span><div class="content-wrapper"><p style="height: 34px; max-height: none; white-space: normal;" class="content" data-multiline-truncation="">people viewed your profile in the past 30 days</p></div></a></section><section data-li-lego-trk-status="fired" data-li-utrk-impr_fired="" class="summary" data-li-utrk-el="eyJzIjoiT1JHQU5JQyIsImMiOiJleUoxYVVWc1pXMWxiblFpT2lKcFpHVnVkR2wwZVVwWlRVSkpTU0o5XHJcbiIsInUiOiJ1cm46bGk6bWVtYmVyIiwiZyI6Ik9USEVSIn0" data-block="lego" data-li-lego-trk-token="czRBuCBjum5Is7dFp2oMbz0Zpn9LoRdT9zROol1Ipl9T9zRArQRIpl9T9z4Zp6lQsSlRsmlirnlK9AVfilh9kQZgfnB2sClAsAZQpmtAqnsCqmByrnBGnTBQqnhKpmhFnTFLfmh9t6lDp6BT9z0ZrCZFt6BPrR1QpmtAqnsCc2UMfmlOrSdjsCsCfn9xk6NBkD9D9zRArQRIpl9OpOoOfmVLqnhFsSZgs7lLsCsCejAVejAZp6lQsSlRsmlirnles7lLsCsCsS9LqzRAin1RrT9D9AVfilh9kQZgfnB2sClAsCYCsClHpmlPnS9LqzRAinhKpmRDpncCunhFt6VBp6BvuCYZp4BQrSNP9DhItm5CpmgZp4BQtmZVomMCsClKrCBTbnFLfmlJokVBpS5M9D1JrzRAin1MoioNe3gQcjRAimVLqndOpnoCdj4Od34RczcZp4BR9AgP9kgP9k51gndFiQFGlDt1l7xeqktjkkwSsBAZp4BQu6lQrCZz" data-li-lego-action="PRIMARY_ACTION" data-li-lego-action-name="click"><a href="https://www.linkedin.com/job/consumer/jobsHome?companyIds=106724%2C3591865%2C977259&amp;trk=hp-identity-jymbii" data-li-auto-click-utrki="u=identityJYMBII&amp;n=viewJobsPage&amp;y=CLICK">
+						<span class="icon jymbii" role="presentation"></span>
+					<div class="content-wrapper">
+						<p style="height: 34px; max-height: none; white-space: normal;" class="content" data-multiline-truncation="">New jobs from Quest Groups LLC, Mousera, Coit Group…</p>
+					</div>
+				</a>
+			</section>
+			</div>
+			</div>
+			<div id="pop-container">
+				<div id="pop">
+				</div>
+			-->
+				</section>
+			</div>
+
+		</div>
+	</div>
 
 	<div id="header" class="global-header responsive-header nav-v5-2-header responsive-1">
 		<div id="content_wrapper" class="wrapper">
@@ -24,7 +59,7 @@
 							<fieldset style="border: none; float: left">
 								<div class="search-scope global-nav-styled-dropdown" id="control_gen_2">
 									<div class="label" style="color: #999999; font-size: 10px;">
-										<img src="hamburger_bar_icon3.png" height="22" width="18" style="padding-left: 5px; padding-top: 3px; float: left;">
+										<img src="images/hamburger_bar_icon3.png" height="22" width="18" style="padding-left: 5px; padding-top: 3px; float: left;">
 										<div style="width: 10px; float: left; padding-top: 6px; margin-left: 3px;">&#9660;</div>
 									</div>
 									<ul class="search-selector">
@@ -56,7 +91,7 @@
 								</div>
 								<input id="search-box-container" class="search-box-container" type="text">
 								<button name="search" value="Search" class="search-button" type="submit">
-									<img src="search_icon.png" height="16" width="16" style="padding-top: 5px">
+									<img src="images/search_icon.png" height="16" width="16" style="padding-top: 5px">
 								</button>
 							</fieldset>
 							<div class="advanced-search-outer">
@@ -70,28 +105,28 @@
 						<ul class="utilities">
 							<li class="utilities-tab">
 								<a href="" class="utilities-tab-item">
-									<img src="message_icon2.png">
+									<img src="images/message_icon2.png">
 								</a>
 							</li>
 						</ul>
 						<ul class="utilities">
 							<li class="utilities-tab">
 								<a href="" class="utilities-tab-item">
-									<img src="notifications_icon2.png">
+									<img src="images/notifications_icon2.png">
 								</a>
 							</li>
 						</ul>
 						<ul class="utilities">
 							<li class="utilities-tab">
 								<a href="" class="utilities-tab-item">
-									<img src="grow_network_icon2.png">
+									<img src="images/grow_network_icon2.png">
 								</a>
 							</li>
 						</ul>
 						<ul class="utilities">
 							<li class="utilities-tab">
 								<a href="" class="utilities-tab-item">
-									<img src="account_icon.png">
+									<img src="images/account_icon.png">
 								</a>
 							</li>
 						</ul>
@@ -146,43 +181,6 @@
 
 
 
-	<div id="main">
-		<div id="identity-container">
-
-
-			<div id="identity">
-				<section class="member">
-
-					<div>
-						<a href="https://www.linkedin.com/profile/view?id=AAMAAAHwIKcB1cWjWM-s9J6zRf4MOgCqnWUpgRI&amp;trk=hp-identity-photo" class="photo"><img alt="Stephen Cauterucio" src="https://media.licdn.com/mpr/mpr/shrink_100_100/AAEAAQAAAAAAAAZXAAAAJDFlNWM3NTM0LTEzNDQtNDEwZi1iMTkyLWRlNDI5NzE5ZDIxZg.jpg" height="100" width="100"></a>
-						<div class="info">
-							<h3><a href="https://www.linkedin.com/profile/view?id=AAMAAAHwIKcB1cWjWM-s9J6zRf4MOgCqnWUpgRI&amp;trk=hp-identity-name" class="name" dir="ltr">Stephen Cauterucio</a></h3>
-							<h3><a href="https://www.linkedin.com/profile/view?id=AAMAAAHwIKcB1cWjWM-s9J6zRf4MOgCqnWUpgRI&amp;trk=hp-identity-headline" class="headline"> Security Firmware Engineer at HGST</a></h3>
-
-							<a href="" class="profile-view">Viewed by 9 people in last week</a>
-						</div>
-					</div>
-			<!--
-				</section>
-				<div class="stats " data-li-utrk-module="eyJwIjoib3otd2lubmVyIiwiYyI6IjYyQkU4NzQxMjFBMjM3MTRDMEMxNThDOTJBMkIwMDAwIiwibSI6ImhvbWU6aWRlbnRpdHkiLCJuIjoiMCJ9">
-					<section data-li-lego-trk-status="fired" data-li-utrk-impr_fired="" class="summary" data-li-utrk-el="eyJzIjoiT1JHQU5JQyIsImMiOiJleUoxYVVWc1pXMWxiblFpT2lKcFpHVnVkR2wwZVZkV1RWQWlmUVxyXG4iLCJ1IjoidXJuOmxpOm1lbWJlciIsImciOiJPVEhFUiJ9" data-block="lego" data-li-lego-trk-token="0OfmlWqldVomNMsSBA9z0Kc3RBsCZzkTsCfn9xk6NBkDsCfmhLjmNBkDsCcjRApnhPpnlNpl9JtmUCjAZ9l4BjjR0Zuk9OpmhOjThBpShFtOpMrnpTnTBQqnhKpmhFnTFLfmh9t6lDp6BT9z0ZrCZFt6BPrR1QpmtAqnsCc2UMfmlOrSdjsCsCfn9xk6NBkD9D9zRArQRIpl9OpOoMfmVLqnhFsSZgs7lLsCsCejAVejAZp6lQsSlRsmlirnles7lLsCsCs6RStPRAin1RrT9D9AVfilh9kQZgfnB2sClAsCYCsClHpmlPnS9LqzRAinhKpmRDpncCunhFt6VBp6BvuCYZp4BQrSNP9DhItm5CpmgZp4BQtmZVomMCsClKrCBTbnFLfmlJokVBpS5M9D1JrzRAin1MoioNe3gQcjRAimVLqndOpnoCdj4Od34RczcZp4BR9AgP9kgP9k51gndFiQFGlDt1l7xeqktjkkwSsBAZp4BQu6lQrCZz" data-li-lego-action="PRIMARY_ACTION" data-li-lego-action-name="click"><a href="https://www.linkedin.com/wvmx/profile?trk=hp-identity-wvmp" data-li-auto-click-utrki="u=identityWVMP&amp;n=viewWVMP&amp;y=CLICK"><span class="num">8</span><div class="content-wrapper"><p style="height: 34px; max-height: none; white-space: normal;" class="content" data-multiline-truncation="">people viewed your profile in the past 30 days</p></div></a></section><section data-li-lego-trk-status="fired" data-li-utrk-impr_fired="" class="summary" data-li-utrk-el="eyJzIjoiT1JHQU5JQyIsImMiOiJleUoxYVVWc1pXMWxiblFpT2lKcFpHVnVkR2wwZVVwWlRVSkpTU0o5XHJcbiIsInUiOiJ1cm46bGk6bWVtYmVyIiwiZyI6Ik9USEVSIn0" data-block="lego" data-li-lego-trk-token="czRBuCBjum5Is7dFp2oMbz0Zpn9LoRdT9zROol1Ipl9T9zRArQRIpl9T9z4Zp6lQsSlRsmlirnlK9AVfilh9kQZgfnB2sClAsAZQpmtAqnsCqmByrnBGnTBQqnhKpmhFnTFLfmh9t6lDp6BT9z0ZrCZFt6BPrR1QpmtAqnsCc2UMfmlOrSdjsCsCfn9xk6NBkD9D9zRArQRIpl9OpOoOfmVLqnhFsSZgs7lLsCsCejAVejAZp6lQsSlRsmlirnles7lLsCsCsS9LqzRAin1RrT9D9AVfilh9kQZgfnB2sClAsCYCsClHpmlPnS9LqzRAinhKpmRDpncCunhFt6VBp6BvuCYZp4BQrSNP9DhItm5CpmgZp4BQtmZVomMCsClKrCBTbnFLfmlJokVBpS5M9D1JrzRAin1MoioNe3gQcjRAimVLqndOpnoCdj4Od34RczcZp4BR9AgP9kgP9k51gndFiQFGlDt1l7xeqktjkkwSsBAZp4BQu6lQrCZz" data-li-lego-action="PRIMARY_ACTION" data-li-lego-action-name="click"><a href="https://www.linkedin.com/job/consumer/jobsHome?companyIds=106724%2C3591865%2C977259&amp;trk=hp-identity-jymbii" data-li-auto-click-utrki="u=identityJYMBII&amp;n=viewJobsPage&amp;y=CLICK">
-						<span class="icon jymbii" role="presentation"></span>
-					<div class="content-wrapper">
-						<p style="height: 34px; max-height: none; white-space: normal;" class="content" data-multiline-truncation="">New jobs from Quest Groups LLC, Mousera, Coit Group…</p>
-					</div>
-				</a>
-			</section>
-			</div>
-			</div>
-			<div id="pop-container">
-				<div id="pop">
-				</div>
-			-->
-				</section>
-			</div>
-
-		</div>
-	</div>
 
 </body>
 </html>
