@@ -17,7 +17,7 @@ h3 {
 }
 
 #identity-container {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 	background:white;
 }
 
@@ -69,6 +69,29 @@ h3 {
 
 	position:absolute;
 	bottom:20px;
+}
+
+.feed {
+	
+	margin-bottom: 20px;
+	background: white;
+}
+
+
+.feed h2 {
+	
+	border: 2px;
+	border-style: solid;
+	width: 180px;
+	//background-color: RGB(26,133,188);
+	background-color: RGB(95,95,95);
+	color: white;
+	margin: 0px 0px 5px 0px;
+}
+
+#trending-heading h2 {
+	
+	width: 160px;
 }
 
 #options {
