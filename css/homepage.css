@@ -82,16 +82,75 @@ h3 {
 	
 	border: 2px;
 	border-style: solid;
-	width: 180px;
+	width: 200px;
 	//background-color: RGB(26,133,188);
 	background-color: RGB(95,95,95);
 	color: white;
 	margin: 0px 0px 5px 0px;
 }
 
+.feed .person-box {
+	
+	position: relative;
+    padding: 5px 5px 0px 5px;
+    width: 100%;
+    float: left;
+}
+
+.feed-photo {
+    float: left;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border: none;
+}
+
+.feed .person-description {
+	
+	height: 60px;
+	margin-left: 55px;
+}
+
+.feed .person-box .person-name {
+
+	font-size: 18px;
+    font-weight: bold;
+    line-height: 50px;
+    //color: #0645AD;
+	color: #008cc9;
+	padding-top: 5px;
+    max-height: 50px;
+}
+
+a:hover {
+	
+	text-decoration:underline;
+}
+
+.feed .person-box .person-job {
+
+    font-size: 12px;
+    line-height: 14px;
+    color: #66696a;
+    max-height: 14px;
+}
+
+.feed .post {
+	
+	padding-bottom: 30px;
+}
+
+.feed .post button {
+	
+	color: #008cc9;
+	background:none;
+	border:none;
+	padding:0;
+}
+
 #trending-heading h2 {
 	
-	width: 160px;
+	width: 180px;
 }
 
 #options {
