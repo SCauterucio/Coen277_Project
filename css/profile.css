@@ -7,17 +7,18 @@
 	left:13%;
 }
 
-#identity-container {
+#profile-container {
     margin-bottom: 20px;
 	background:white;
+	min-height: 149px;
 }
 
-#identity {
+#profile {
     position: relative;
     overflow: hidden;
 }
 
-#identity .member {
+#profile .member {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -26,7 +27,7 @@
     float: left;
 }
 
-#identity .photo {
+#profile .photo {
     float: left;
     height: 200px;
     width: 200px;
@@ -34,7 +35,7 @@
     border: none;
 }
 
-#identity .name-title {
+#profile .name-title-container {
     //height: 100px;
     //margin-left: 205px;
     position: relative;
@@ -45,8 +46,12 @@
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 0px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
+
+#profile .name-title {
+	
+	padding-bottom:15px;
 }
 
 .account-icons {
@@ -56,9 +61,256 @@
     z-index: 1;
 }
 
-h1 {
+.locality {
+    font-size: 13px;
+    line-height: 17px;
+    color: #66696a;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.locality a:focus {
+    text-decoration: none;
+    color: #006fa6;
+    cursor: pointer;
+}
+
+h1, p, dd, dl, table {
     margin: 0;
     padding: 0;
     border: 0;
     vertical-align: baseline;
+}
+
+#demographics {
+    margin: 2px 0;
+    font-size: 13px;
+    line-height: 17px;
+    color: #66696a;
+    font-weight: normal;
+}
+
+#demographics a {
+    font-size: 13px;
+    line-height: 17px;
+    color: #66696a;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+#demographics dt {
+    display: none;
+}
+
+#demographics dd {
+    display: inline;
+}
+
+#demographics dd.industry {
+    border-left: 1px solid #bbb;
+    padding: 0 0 0 8px;
+    margin: 0 0 0 5px;
+}
+
+th {
+    font-size: 11px;
+    color: #999;
+    vertical-align: top;
+    padding: 2px 20px 0 0;
+    white-space: nowrap;
+}
+th + td {
+    padding-top: 2px;
+}
+th, td {
+	text-align: left;
+	font-weight: normal;
+	vertical-align: middle;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+	margin: 10px 0 0;
+}
+
+table li {
+    display: inline;
+	text-align: initial;
+}
+
+table li a {
+    font-size: 12px;
+    line-height: 14px;
+    color: #333;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+th a:link, th a:visited, th a:hover, th a:active {
+    color: #999;
+}
+
+.member-connections {
+    font-size: 11px;
+    color: #999;
+    float: right;
+    padding: 7px 0 0 10px;
+    line-height: 15px;
+    vertical-align: bottom;
+    text-align: right;
+}
+
+.member-connections a {
+    color: #006fa6;
+    text-decoration: none;
+}
+
+.member-connections strong {
+    font-weight: bold;
+    display: block;
+    color: #333;
+    font-size: 18px;
+    line-height: 14px;
+}
+.profile-actions.view-actions {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+}
+
+/*.button-primary {
+font-weight: bold;
+border-width: 1px;
+border-style: solid;
+cursor: pointer;
+margin: 0;
+overflow: visible;
+text-decoration: none !important;
+width: auto;
+text-shadow: 0 1px 1px rgba(0,0,0,0.35);
+border-radius: 3px 0 0 3px;
+padding: 0 13px;
+height: 31px;
+line-height: 29px;
+box-sizing: border-box;
+font-size: 13px;
+color: #fff;
+background-color: #287bbc;
+border-color: #1b5480;
+white-space: nowrap;
+vertical-align: middle;
+display: inline-block;
+float: none;
+
+border: 0;
+font: inherit;
+
+word-wrap: break-word;
+
+}*/
+
+.katy-button-group .button-group-primary {
+    top: 5px;
+}
+
+.katy-button-group {
+    line-height: 1;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    vertical-align: middle;
+    position: relative;
+    position: relative;
+}
+
+.katy-button-menu {
+    display: inline-block;
+}
+
+.button-primary {
+    background-image: none;
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    margin: 0;
+    overflow: visible;
+    text-decoration: none !important;
+    width: auto;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.35);
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    -ms-border-radius: 3px 0 0 3px;
+    -o-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    padding: 0 13px;
+    height: 31px;
+    line-height: 29px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 13px;
+    color: #fff;
+    background-color: #287bbc;
+    border-color: #1b5480;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF287BBC', endColorstr='#FF23639A');
+    background-image: -webkit-linear-gradient(top, #287bbc 0%,#23639a 100%);
+    background-image: -moz-linear-gradient(top, #287bbc 0%,#23639a 100%);
+    background-image: -o-linear-gradient(top, #287bbc 0%,#23639a 100%);
+    background-image: linear-gradient(top, #287bbc 0%,#23639a 100%);
+    white-space: nowrap;
+    vertical-align: middle;
+    float: left;
+    display: block;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    float: none;
+}
+
+.katy-button-group.button-group-primary .button-primary.hover, .katy-button-group.button-group-primary .button-primary:hover, .katy-button-group.button-group-primary .button-primary.focus, .katy-button-group.button-group-primary .button-primary:focus, .katy-button-group.button-group-primary .button-primary.is-not-following.hover, .katy-button-group.button-group-primary .button-primary.is-not-following:hover, .katy-button-group.button-group-primary .button-primary.is-not-following.focus, .katy-button-group.button-group-primary .button-primary.is-not-following:focus, .katy-button-group.button-group-primary .people-follow.active .button-primary.is-following.hover, .katy-button-group.button-group-primary .people-follow.active .button-primary.is-following:hover, .katy-button-group.button-group-primary .people-follow.active .button-primary.is-following.focus, .katy-button-group.button-group-primary .people-follow.active .button-primary.is-following:focus {
+    background-color: #2672ae;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF2672AE', endColorstr='#FF1E4F7E');
+    background-image: -webkit-linear-gradient(top, #2672ae 0%,#1e4f7e 100%);
+    background-image: -moz-linear-gradient(top, #2672ae 0%,#1e4f7e 100%);
+    background-image: -o-linear-gradient(top, #2672ae 0%,#1e4f7e 100%);
+    background-image: linear-gradient(top, #2672ae 0%,#1e4f7e 100%);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+}
+
+.katy-button-group.button-group-primary .button-caret .caret, .katy-button-group.button-group-primary .dropdown-caret .caret, .caret {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    vertical-align: middle;
+    height: 0;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    border-style: dashed;
+    border-color: transparent;
+    border-top-style: solid;
+    border-width: 5px 5px 0;
+    border-top-color: #fff;
+    overflow: hidden;
+    content: "\0020";
 }
