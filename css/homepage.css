@@ -326,6 +326,31 @@ button:hover {
 	line-height: 17px;
 }
 
+.data .link-to-more {
+	
+	//text-align:center;
+	//color: purple;
+	background:none;
+	border:none;
+	width: 100%;
+    //height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+
+.ad {
+	
+	position: relative;
+	background: white;
+	margin-bottom: 20px;
+	height:auto;
+}
+.ad .ad-image {
+	
+	width:300px;
+}
+
 /*
 .discovery-module {
     position: relative;

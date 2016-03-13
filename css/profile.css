@@ -1,0 +1,64 @@
+#main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+    position: absolute;
+	top: 80px;
+	left:13%;
+}
+
+#identity-container {
+    margin-bottom: 20px;
+	background:white;
+}
+
+#identity {
+    position: relative;
+    overflow: hidden;
+}
+
+#identity .member {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 650px;
+    float: left;
+}
+
+#identity .photo {
+    float: left;
+    height: 200px;
+    width: 200px;
+    padding: 0;
+    border: none;
+}
+
+#identity .name-title {
+    //height: 100px;
+    //margin-left: 205px;
+    position: relative;
+    z-index: 6;
+    float: right;
+    width: 390px;
+    word-wrap: break-word;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+}
+
+.account-icons {
+    float: right;
+    margin: 0 0 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
