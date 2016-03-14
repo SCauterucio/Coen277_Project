@@ -304,11 +304,11 @@ th a:link, th a:visited, th a:hover, th a:active {
 	margin: 0px 0px 5px 0px;
 }
 
-#experience .body {
+#experience .body, #education .body {
 	padding:10px;
 }
 
-.experience-logo {
+.experience-logo, .education-logo {
     width: 100px;
     text-align: center;
 	float: right;
@@ -316,7 +316,13 @@ th a:link, th a:visited, th a:hover, th a:active {
 	margin-bottom: 0px;
 }
 
-#experience .body h4 a {
+.logo {
+	
+	width:60px;
+	height:60px;
+}
+
+#experience .body h4 a, #education .body h4 a {
     font-size: 16px;
     font-weight: bold;
     line-height: 18px;
@@ -324,13 +330,13 @@ th a:link, th a:visited, th a:hover, th a:active {
     text-decoration: none;
 }
 
-#experience .body h5 a:hover {
+#experience .body h5 a:hover, #education .body h5 a:hover {
     text-decoration: none;
     color: #006fa6;
     cursor: pointer;
 }
 
-#experience .body h5 a {
+#experience .body h5 a, #education .body h5 a {
     font-size: 14px;
     font-weight: normal;
     line-height: 16px;
@@ -338,7 +344,7 @@ th a:link, th a:visited, th a:hover, th a:active {
     text-decoration: none;
 }
 
-#experience .experience-date-locale {
+#experience .experience-date-locale, #education .education-date-locale {
     display: block;
     margin-top: 3px;
     margin-bottom: 0px;
@@ -361,9 +367,16 @@ h5 {
 	color: #434649;
 }
 
-#experience .job-description {
+#experience .job-description, #education .school-description {
 	margin-bottom: 30px;
 }
+
+#skills-screenshot {
+	
+	padding:10px;
+}
+
+
 
 #summary-heading {
 
@@ -375,6 +388,15 @@ h5 {
 	width:200px;
 }
 
+#skills-heading {
+	
+	width:70px;
+}
+
+#education-heading {
+	
+	width:125px;
+}
 
 #right {
     margin-left: auto;
