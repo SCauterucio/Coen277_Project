@@ -405,9 +405,10 @@ h5 {
     position: absolute;
 	top: 80px;
 	right:15%;
+	//left:53%;
 }
 
-.ad, #similar-people {
+.ad, #similar-people, #endorse, #common {
 	
 	position: relative;
 	background: white;
@@ -421,6 +422,15 @@ h5 {
 
 #similar-people h3 {
     padding-top: 15px;
+    padding-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    color: #000;
+	text-align:center;
+}
+
+#endorse h3, #common h3 {
     padding-bottom: 5px;
     font-size: 14px;
     font-weight: bold;
@@ -475,6 +485,130 @@ h5 {
     color: #333;
     font-weight: normal;
 }
+#endorse, #common {
+	padding: 5px;
+}
+#endorse .skills {
+	width:50%;
+	text-align:right;
+	display:inline-block;
+}
+
+.skills ul {
+	
+	margin-top:20px;
+}
+
+.skills li, .endorse-buttons li {
+	min-height:30px;
+}
+
+#endorse .endorse-buttons {
+	display:inline-block;
+	width:40%;
+	text-align:left;
+	left:50%;
+}
+
+#right .arrow-box {
+	
+	position: relative;
+	background: white;
+	margin-bottom: 20px;
+	height:auto;
+	padding-bottom:10px;
+}
+
+.arrow-box h3 {
+    padding-top: 10px;
+    text-align:center;
+	padding-bottom: 5px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 16px;
+	color: #000;
+	text-align: center;
+}
+
+.option-section .option-main-photo {
+	
+	height:70px; 
+	width:70px;
+	padding: 0 2px 0 2px;
+}
 
 
+.option-section .option-photo {
+	
+	height:65px; 
+	width:65px;
+	//padding: 0 2px 0 2px;
+	transform: translateY(-2px);
+}
 
+.next-arrow {
+	
+	height: 65px;
+	width: 20px;
+}
+
+.data a {
+    color: #006fa6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.data {
+	margin:10px;
+}
+
+.data abbr {
+    display: inline-block;
+    vertical-align: baseline;
+    border-radius: 2px;
+    line-height: 12px;
+    font-weight: bold;
+    color: #006fa6;
+    background-color: #e1e9ec;
+    padding: 2px 6px 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+	text-decoration: none;
+	font-size: 11pt;
+}
+
+.data h4 {
+	
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 90%;
+	vertical-align: baseline;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.data .connect {
+	font-size: 12px;
+	line-height: 14px;
+	color: #66696a;
+	font-weight: normal;
+	font-weight: bold;
+	line-height: 17px;
+}
+
+.data .link-to-more {
+	
+	//text-align:center;
+	//color: purple;
+	background:none;
+	border:none;
+	width: 100%;
+    //height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}

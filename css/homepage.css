@@ -229,7 +229,8 @@ button:hover {
     width: 300px;
     position: absolute;
 	top: 80px;
-	right:15%;
+	//right:15%;
+	left:53%;
 }
 
 #right .arrow-box {
