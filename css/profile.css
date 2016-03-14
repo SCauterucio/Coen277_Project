@@ -75,7 +75,7 @@
     cursor: pointer;
 }
 
-h1, p, dd, dl, table {
+h1, p, dd, dl, table, h4, h5, span {
     margin: 0;
     padding: 0;
     border: 0;
@@ -186,37 +186,6 @@ th a:link, th a:visited, th a:hover, th a:active {
     *display: inline;
 }
 
-/*.button-primary {
-font-weight: bold;
-border-width: 1px;
-border-style: solid;
-cursor: pointer;
-margin: 0;
-overflow: visible;
-text-decoration: none !important;
-width: auto;
-text-shadow: 0 1px 1px rgba(0,0,0,0.35);
-border-radius: 3px 0 0 3px;
-padding: 0 13px;
-height: 31px;
-line-height: 29px;
-box-sizing: border-box;
-font-size: 13px;
-color: #fff;
-background-color: #287bbc;
-border-color: #1b5480;
-white-space: nowrap;
-vertical-align: middle;
-display: inline-block;
-float: none;
-
-border: 0;
-font: inherit;
-
-word-wrap: break-word;
-
-}*/
-
 .katy-button-group .button-group-primary {
     top: 5px;
 }
@@ -313,4 +282,109 @@ word-wrap: break-word;
     border-top-color: #fff;
     overflow: hidden;
     content: "\0020";
+}
+
+
+.section {
+	
+	margin-bottom: 20px;
+	background: white;
+}
+
+.section p {
+	padding:10px;
+}
+
+.section h2 {
+	
+	border: 2px;
+	border-style: solid;
+	background-color: RGB(95,95,95);
+	color: white;
+	margin: 0px 0px 5px 0px;
+}
+
+#experience .body {
+	padding:10px;
+}
+
+.experience-logo {
+    width: 100px;
+    text-align: center;
+	float: right;
+	margin-top: -2px;
+	margin-bottom: 0px;
+}
+
+#experience .body h4 a {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #000;
+    text-decoration: none;
+}
+
+#experience .body h5 a:hover {
+    text-decoration: none;
+    color: #006fa6;
+    cursor: pointer;
+}
+
+#experience .body h5 a {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 16px;
+    color: #434649;
+    text-decoration: none;
+}
+
+#experience .experience-date-locale {
+    display: block;
+    margin-top: 3px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #66696a;
+    font-size: 13px;
+    line-height: 17px;
+}
+
+#experience p {
+    margin-bottom: 0px;
+	font-size: 11pt;
+}
+
+h5 {
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 16px;
+	color: #434649;
+}
+
+#experience .job-description {
+	margin-bottom: 30px;
+}
+
+#summary-heading {
+
+	width:115px;
+}
+
+#experience-heading {
+
+	width:200px;
+}
+
+
+#right {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    position: absolute;
+	top: 80px;
+	right:15%;
+	background-color:green;
+	min-height:1000px;
+}
+
 }
