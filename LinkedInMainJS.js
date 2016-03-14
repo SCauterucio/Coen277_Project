@@ -180,9 +180,9 @@ function initializeJobResults( pageNum ) {
 		
 		lvDivJobSearchResultList.appendChild(lvDivJobSearchResultItem);
 	}
-		
-	initializeFilters();
 }
 
-function initializeFilters() {
+
+function testing() {
+	
 }
