@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+  <link rel="stylesheet" type="text/css" href="LinkedInMainFormatting.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="LinkedInMainJS.js"></script>
+<meta charset="ISO-8859-1">
+<title>LinkedIn Makeover: Post a Job - Checkout</title>
+	<style type="text/css">
+		.job-post-option {
+			background: #F8F9FB;
+			width: 215px;
+			height: 70px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		    font-size: 18px;
+		    cursor: pointer;
+		    text-align: center;
+		}
+		
+		.job-post-option:hover {
+			background: #FAFBFC;
+			-webkit-box-shadow: 6px 5px 2px -2px rgba(225,228,231,0.25);
+			-moz-box-shadow: 6px 5px 2px -2px rgba(225,228,231,0.25);
+			box-shadow: 6px 5px 2px -2px rgba(225,228,231,0.25);
+		}
+		
+		.job-pricing {
+			font-size: 13px;
+			color: #AAAAAA;
+			text-align: center;
+			margin-top: 5px;
+		}
+		
+		.job-savings {
+			font-size: 15px;
+			color: #60AA14;
+			font-weight: bold;
+			margin-top: 7px;
+		}
+		
+		.background-div {
+			margin-top: 15px;
+			height: 105px;
+			width: 215px;
+			background: #F8F9FB;
+			position: relative;
+			float: left;
+			margin-right: 15px;
+			border: 1px solid #D9D9D9;
+		}
+		
+		.form-disabled {
+			color: #C8C8C8;
+		}
+		
+		.form-enabled {
+			color: black;
+		}
+		
+		.textbox-enabled {
+			background-color: white;
+			color: black;
+			padding-left: 5px;
+			padding-top: 2px;
+			padding-bottom: 2px;
+			border: 1px solid #E3E3E3;
+		}
+		
+		.textbox-disabled {
+			background-color: #F9F9F7;
+			color: #C8C8C8;
+			border: 1px solid #E3E3E3;
+			padding-left: 5px;
+			padding-top: 2px;
+			padding-bottom: 2px;
+		}
+		
+		#order-summary-results {
+			border: none;
+			border-collapse: collapse;
+			margin-left: 20px;
+			margin-top: 20px;
+			font-size: 14px;
+			width: 315px;
+		}
+		
+		#order-summary-results tr .order-summary-detail-item {
+			text-align: right;
+		}
+		
+		#faqs-link, #faqs-link:visited {
+			text-decoration: underline;
+			color: #3F48CC;
+		}
+		
+		#faqs-link:hover {
+			color: #008cc9;
+		}
+		
+		#customer-support-email-link, #customer-support-email-link:visited {
+			color: #008cc9;
+			text-decoration: underline;
+		}
+		
+		#customer-support-email-link:hover {
+			color: #3F48CC;
+		}
+
+		.form-controls {
+			float: left;
+			clear: left;
+			width: 335px;
+			margin-top: 15px;
+			text-align: center;
+		}
+		
+		.continue {
+			font-weight: bold;
+			border-width: 1px;
+			border-style: solid;
+			cursor: pointer;
+			margin: 0;
+			overflow: visible;
+			text-decoration: none !important;
+			width: auto;
+			text-shadow: 0 1px 1px rgba(0,0,0,0.35);
+			border-radius: 3px;
+			padding: 0 10px;
+			height: 31px;
+			line-height: 30px;
+			box-sizing: border-box;
+			font-size: 13px;
+			color: #fff;
+			border-color: #1b5480;
+			background-image: -webkit-linear-gradient(top, #287bbc 0%, #23639a 100%);
+			background-image: -moz-linear-gradient(top, #287bbc 0%, #23639a 100%);
+			background-image: -o-linear-gradient(top, #287bbc 0%, #23639a 100%);
+			background-image: linear-gradient(top, #287bbc 0%, #23639a 100%);
+			white-space: nowrap;
+			display: inline-block;
+			zoom: 1;
+			vertical-align: middle;
+		}
+
+		.continue:hover {
+			color: #fff;
+			background-image: -webkit-linear-gradient(top, #287bbc 0%, #1E4F7E 100%);
+			border-color: #004a73;
+			box-shadow: 0 3px 2px -2px #D0D0D0;
+		}
+		
+		.btn-primary {
+			font-weight: bold;
+			border-width: 1px;
+			border-style: solid;
+			cursor: pointer;
+			margin: 0;
+			overflow: visible;
+			text-decoration: none !important;
+			width: auto;
+			text-shadow: 0 1px 1px rgba(0,0,0,0.35);
+			border-radius: 3px;
+			padding: 0 13px;
+			height: 31px;
+			line-height: 29px;
+			box-sizing: border-box;
+			font-size: 13px;
+			background-color: #287bbc;
+			border-color: #1b5480;
+			background-image: -webkit-linear-gradient(top, #287bbc 0%, #2369a 100%);
+			white-space: nowrap;
+			display: inline-block;
+			zoom: 1;
+			vertical-align: middle;
+		}
+		
+		.asterisk {
+			color: red;
+		}
+		
+		.payment-field-input {
+			border-radius: 2px;
+			border: solid 1px rgba(0,0,0,0.25);
+			height: 32px;
+			font-weight: 400;
+			color: black;
+			font-size: 16px;
+			line-height: 24px;
+			background: #fff;
+			box-shadow: none;
+			width: 100%;
+			box-sizing: border-box;
+			padding: 8px 7px 5px;
+			vertical-align: middle;
+			display: block;
+		}
+		
+		.payment-field {
+			margin-bottom: 20px;
+		}
+		
+		.payment-field label {
+			line-height: 30px;
+			font-size: 18px;
+			color: #777777;
+		}
+		
+		#expiration-date-month, #expiration-date-year {
+			width: 75px;
+			font-weight: 400;
+			color: rgba(0,0,0,0.7);
+			font-size: 16px;
+			line-height: 24px;
+			height: 32px;
+			padding-top: 4px;
+			padding-left: 3px;
+		}
+		
+		#country-value {
+			width: 100%;
+			font-weight: 400;
+			color: rgba(0,0,0,0.7);
+			font-size: 16px;
+			line-height: 24px;
+			height: 32px;
+			padding-top: 4px;
+			padding-left: 3px;
+		}
+		
+		#security-code {
+			margin-left: 20px;
+			width: 50px;
+			font-size: 16px;
+			padding-top: 4px;
+			line-height: 32px;
+			height: 32px;
+			padding-left: 3px;
+		}
+	</style>
+</head>
+<body class="cd-fixed-bg" onload="loadValues()">
+	<div style="width: 984px; background-color: transparent; position: absolute; left: 24%; top: 100px; margin-bottom: 60px;">
+		<div style="position: relative; float: left; width: 525px; background-color: white; border: 1px solid #D9D9D9;">
+			<div style="font-size: 28px; padding-top: 20px; text-align: center;">Select Job Posting Option</div>
+			<div style="padding-left: 40px; padding-right: 20px; display: inline-block;">
+				<div id="job-posting-options" style="display: inline-block">
+					<div class="background-div" id="one-job-post-background">
+						<div id="one-job-post" class="job-post-option">
+							1 job post
+							<div class="job-pricing">for $499.00</div>
+						</div>
+					</div>
+					<div class="background-div" id="five-job-pack-background">
+						<div id="five-job-pack" class="job-post-option">
+							5-job pack
+							<div class="job-pricing">$395.00 per job</div>
+							<div class="job-savings">Save 21%</div>
+						</div>
+					</div>
+					<div class="background-div" id="ten-job-pack-background">
+						<div id="ten-job-pack" class="job-post-option">
+							10-job-pack
+							<div class="job-pricing">$295.00 per job</div>
+							<div class="job-savings">Save 41%</div>
+						</div>
+					</div>
+					<div class="background-div" id="existing-job-credit-background">
+						<div id="use-existing-job-credits" class="job-post-option">
+							Use existing job credits
+							<div class="job-pricing">(<b>n</b> job credits remaining)</div>
+						</div>
+					</div>
+				</div>
+				<div style="margin-top: 25px; margin-bottom: 10px;">
+					<input type="checkbox" id="sponsor-job-checkbox"><font style="font-weight: bold; font-size: 15px; color: #555555">Yes, sponsor my job</font>
+				</div>
+				<form id="sponsor-job" class="form-disabled" style="display: inline-block; font-size: 13px; padding-bottom: 20px;">
+					<div style="float: left; position: relative;">
+						<label for="cost-per-click" style="line-height: 2;">
+							<b>Cost per click</b>
+						</label><br>
+						<input style="margin-bottom: 5px;" class="textbox-disabled" id="cost-per-click" name="cost-per-click" type="number" value="1.75" disabled> USD<br>
+						<label for="cost-per-click">(only on sponsored placements)</label>
+					</div>
+					<div style="float: left; position: relative; margin-left: 25px;">
+						<label for="total-budget" style="line-height: 2;">
+							<b>Total budget</b>
+						</label><br>
+						<input class="textbox-disabled" id="total-budget" name="total-budget"  type="number" value="200.00" disabled> USD
+					</div>
+				</form>
+			</div>
+			<div style="border-top: 1px solid #D9D9D9; background-color: #F7F9FA; padding: 15px 15px 15px 15px;">
+				<div id="job-posting-credits-expiration" style="visibility: hidden">Job posting expires exactly a year from today. All unused job credits will expire exactly a year from today.</div>
+			</div>
+		</div>
+		<div style="position: relative; float: left; width: 415px; height: 515px; margin-left: 35px; background-color: white;">
+			<div style="width: 355px; height: 350px; margin-top: 20px; margin-left: 30px; margin-right: 30px; border: 1px solid #D9D9D9; border-radius: 8px;">
+				<div style="font-size: 18px; font-weight: bold; margin-top: 20px; text-align: center;">Your order summary</div>
+				<table id="order-summary-results">
+					<tr style="background-color: #EEEEEE; border: 1px solid #EEEEEE; border-collapse: collapse;">
+						<td width="85%" style="border: 1px solid #EEEEEE; border-collapse: collapse">Descriptions</td>
+						<td width="15%" style="border: 1px solid #EEEEEE; border-collapse: collapse; text-align: center;">Amount</td>
+					</tr>
+					<tr>
+						<td style="padding-top: 10px;"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td id="order-summary-job-posting-field" style="padding-bottom: 5px;">Job posting</td>
+						<td class="order-summary-detail-item" id="order-summary-job-posting-value">$0.00</td>
+					</tr>
+					<tr>
+						<td id="order-summary-sponsored-job-field">Sponsored job* (maximum allowance)</td>
+						<td class="order-summary-detail-item" id="order-summary-sponsored-job-value">$0.00</td>
+					</tr>
+					<tr style="border-bottom: 2px solid #D9D9D9; ">
+						<td style="padding-top: 10px;"></td>
+						<td></td>
+					</tr>
+					<tr class="order-summary-detail-item">
+						<td style="padding-top: 10px"></td>
+					</tr>
+					<tr style="font-weight: bold">
+						<td>Item Subtotal</td>
+						<td class="order-summary-detail-item" id="order-summary-item-total" style="padding-bottom: 5px;">$0.00</td>
+					</tr>
+					<tr>
+						<td>Tax</td>
+						<td class="order-summary-detail-item">$0.00</td>
+					</tr>
+					<tr style="border-bottom: 2px solid #D9D9D9;">
+						<td style="padding-top: 10px;"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td style="padding-top: 10px"></td>
+						<td></td>
+					</tr>
+					<tr style="font-weight: bold; font-size: 16px;">
+						<td style="text-align: right; padding-right: 20px;">Estimated Total</td>
+						<td class="order-summary-detail-item" id="order-summary-estimated-total">$0.00</td>
+					</tr>
+					<tr style="font-size: 12px; text-align: right;">
+						<td></td>
+						<td>(in USD)</td>
+					</tr>
+				</table>
+				<div style="border: 1px solid #D9D9D9; border-radius: 8px; background-color: #F7F7F7; margin-top: 30px;">
+					<div style="font-color: #AAAAAA; font-size: 12px; margin: 15px 15px 15px 15px; line-height: 1.4">
+						* You will not be charged any amount until someone clicks on your sponsored ad. Please see <a href="#" id="faqs-link" data-toggle="modal" data-target="#faqs-modal">FAQs &#187;</a> for more details.
+						<script type="text/javascript">
+							// Get the modal
+							var modal = document.getElementById('faqs-modal');
+		
+							// Get the <span> element that closes the modal
+							var span = document.getElementsByClassName("close")[0];
+		
+							// When the user clicks on the button, open the modal
+							$('#faqs-link').on('click', function() {							    
+							    modal.style.display = "block";
+							});
+		
+							// When the user clicks on <span> (x), close the modal
+							span.onclick = function() {
+							    modal.style.display = "none";
+							}
+		
+							// When the user clicks anywhere outside of the modal, close it
+							window.onclick = function(event) {
+							    if (event.target == modal) {
+							        modal.style.display = "none";
+							    }
+							}
+						</script>
+						
+						<div id="faqs-modal" class="modal">
+							<div class="modal-content">
+								<div class="modal-header">
+									<span style="margin-top: 10px;" class="close" id="close-faqs">x</span>
+									<div style="padding-top: 10px; padding-bottom: 10px; font-weight: normal; font-size: 15px;">Frequently Asked Questions</div>
+								</div>
+								<div class="modal-body" style="margin-top: 30px;">
+										<div style="margin-bottom: 30px;">
+											<div style="margin-bottom: 10px;"><b>Who can see my job post?</b></div>
+											We'll share your job across LinkedIn and through email to professionals whose skills and location match the job. Anyone on LinkedIn can find your post through search, and if you have a Company Page, it will appear there, too. You can also share your job via social media.
+										</div>
+										<div style="margin-bottom: 30px;">
+											<div style="margin-bottom: 10px;"><b>Will I get a copy of the receipt?</b></div>
+											You'll get an email receipt and you can also print your billing history from your Settings page.
+										</div>
+										<div style="margin-bottom: 30px;">
+											<div style="margin-bottom: 10px;"><b>How long will my job post be active, and can I renew it?</b></div>
+											Job posts are live for 30 days once they're posted. You can renew your job at any time, which will extend the expiration date by 30 days and update the posting date to the renewal date. Renewals cost the same as a new job post.
+										</div>
+										<div style="margin-bottom: 30px;">
+											<div style="margin-bottom: 10px;"><b>Can I close my job post if I fill the position before the job post expires?</b></div>
+											Yes, you can close your job post at any time before it expires. It will then be removed from search results, and while it can't be reopened, it can be reposted.
+										</div>
+										<div style="margin-bottom: 30px;">
+											<div style="margin-bottom: 10px;"><b>Can I edit my job post after it has been posted?</b></div>
+											Yes, once a job is posted, you can make edits to it from the Manage Jobs page. You can change any field, except for the location, which can't be changed once it's posted.
+										</div>
+										<div style="margin-bottom: 30px">
+											<div style="margin-bottom: 10px;"><b>How will I get an applicant's information when they apply for my job?</b></div>
+											When you post a job, you can select how you want to receive applicant information. You can collect it on LinkedIn and get email updates with new applicants. Or, you can route applicants to an external website to apply, such as your career site or ATS.
+										</div>
+								</div>
+								<div class="modal-footer" style="font-size: 18px; color:#008cc9; background-color: #F8F8F8; padding-top: 20px; padding-bottom: 20px;">
+									Have more questions? Send us an e-mail at <a href="#" id="customer-support-email-link">customersupport@linkedin.com</a>!&nbsp;&nbsp;&nbsp;<img alt="" src="email.png">
+								</div>
+							</div>
+						</div>
+						
+						<script>
+							$('#close-faqs').on('click', function() {
+								$('#faqs-modal').modal('toggle');
+							});
+						</script>
+					</div>
+				</div>
+				<div id="review-order" class="form-controls" style="margin-top: 40px; padding-bottom: 20px;">
+					<a href="LMPostAJobReviewFinalOrder.html" class="btn-primary continue" id="review-order-link">Review Order</a>
+				</div>
+			</div>
+		</div>
+		<div style="position: relative; float: left; width: 700px; height: 700px;">
+			<div style="width: 850px; margin-top: 35px; padding-bottom: 20px; background-color: white; border: 1px solid #D9D9D9;">
+				<div style="width: 770px; margin-left: 40px; margin-right: 40px; padding-top: 20px; padding-bottom: 15px; border-bottom: 1px solid #D9D9D9;">
+					<div style="font-size: 28px; float: left; position: relative;">Choose Payment Method</div>
+					<div style="color: #777777; font-size: 16px; margin-left: 100px; display: inline-block;">
+						<div style="float: left; position: relative; line-height: 28px; vertical-align: middle;">
+							We accept:
+						</div>
+						<div style="float: left; position: relative">
+							<img alt="" src="Visa.png" height="28" style="margin-left: 15px; margin-right: 5px;">
+							<img alt="" src="MasterCard.png" height="28" style="margin-right: 5px;">
+							<img alt="" src="AmericanExpress.png" height="28" style="margin-right: 5px;">
+							<img alt="" src="Discover.png" height="28" style="margin-right: 5px;">
+						</div>
+					</div>
+				</div>
+				<div style="width: 770px; margin-left: 40px; padding-top: 20px; padding-bottom: 20px;">
+					<table style="width: 100%;">
+						<tr>
+							<td width="48%">
+								<div id="first-name-field" class="payment-field">
+									<label for="first-name-value">First name <span class="asterisk">&#42;</span></label>
+									<input type="text" id="first-name-value" name="first-name-value" class="payment-field-input">
+								</div>
+							</td>
+							<td width="4%">
+							</td>
+							<td colspan="3">
+								<div id="card-number-field" class="payment-field">
+									<label for="card-number-value">Card Number <span class="asterisk">&#42;</span></label>
+									<input type="text" id="card-number-value" name="card-number-value" class="payment-field-input">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td width="48%">
+								<div id="last-name-field" class="payment-field">
+									<label for="last-name-value">Last name <span class="asterisk">&#42;</span></label>
+									<input type="text" id="last-name-value" name="last-name-value" class="payment-field-input">
+								</div>
+							</td>
+							<td width="4%">
+							</td>
+							<td colspan="1" width="25%">
+								<div id="expiration-date-field" class="payment-field">
+									<label for="expiration-date-value">Expiration Date <span class="asterisk">&#42;</span></label>
+									<!--  <input type="text" id="expiration-date-value" name="expiration-date-value" class="payment-field-input"> -->
+									<div id="expiration-date-value">
+										<select name="expiration-date-month" id="expiration-date-month">
+											<option value="MM">MM</option>
+											<option value="01">01</option>
+											<option value="02">02</option>
+											<option value="03">03</option>
+											<option value="04">04</option>
+											<option value="05">05</option>
+											<option value="06">06</option>
+											<option value="07">07</option>
+											<option value="08">08</option>
+											<option value="09">09</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+										</select>
+										<select name="expiration-date-year" id="expiration-date-year">
+											<option value="YYYY">YYYY</option>
+											<option value="2016">2016</option>
+											<option value="2017">2017</option>
+											<option value="2018">2018</option>
+											<option value="2019">2019</option>
+											<option value="2020">2020</option>
+											<option value="2021">2021</option>
+											<option value="2022">2022</option>
+											<option value="2023">2023</option>
+											<option value="2024">2024</option>
+											<option value="2025">2025</option>
+											<option value="2026">2026</option>
+											<option value="2027">2027</option>
+											<option value="2028">2028</option>
+											<option value="2029">2029</option>
+											<option value="2030">2030</option>
+											<option value="2031">2031</option>
+											<option value="2032">2032</option>
+											<option value="2033">2033</option>
+											<option value="2034">2034</option>
+											<option value="2035">2035</option>
+										</select>
+									</div>
+								</div>
+							</td>
+							<td width="4%">
+							</td>
+							<td colspan="1">
+								<div id="security-code-field" class="payment-field">
+									<label for="security-code-value">Security Code <span class="asterisk">&#42;</span></label>
+									<input type="text" id="security-code-value" name="security-code-value" class="payment-field-input">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div id="email-address" class="payment-field">
+									<label for="email-value">E-mail Address <span class="asterisk">&#42;</span></label>
+									<input type="text" id="email-value" name="email-value" class="payment-field-input">
+								</div>
+							</td>
+							<td width="4%">
+							</td>
+							<td colspan="1" width="25%">
+								<div id="country-field" class="payment-field">
+									<label for="country-value">Country <span class="asterisk">&#42;</span></label>
+									<!--  <input type="text" id="expiration-date-value" name="expiration-date-value" class="payment-field-input"> -->
+									<select name="country-value" id="country-value">
+										<option value="us" selected="selected">United States</option>
+										<option value="af">Afghanistan</option>
+										<option value="ax">Aland Islands</option>
+										<option value="al">Albania</option>
+										<option value="dz">Algeria</option>
+										<option value="as">American Samoa</option>
+										<option value="ad">Andorra</option>
+										<option value="ao">Angola</option>
+										<option value="ai">Anguilla</option>
+										<option value="aq">Antarctica</option>
+										<option value="ag">Antigua and Barbuda</option>
+										<option value="ar">Argentina</option>
+										<option value="am">Armenia</option>
+										<option value="aw">Aruba</option>
+										<option value="au">Australia</option>
+										<option value="at">Austria</option>
+										<option value="az">Azerbaijan</option>
+										<option value="bs">Bahamas</option>
+										<option value="bh">Bahrain</option>
+										<option value="bd">Bangladesh</option>
+										<option value="bb">Barbados</option>
+										<option value="by">Belarus</option>
+										<option value="be">Belgium</option>
+										<option value="bz">Belize</option>
+										<option value="bj">Benin</option>
+										<option value="bm">Bermuda</option>
+										<option value="bt">Bhutan</option>
+										<option value="bo">Bolivia</option>
+										<option value="ba">Bosnia and Herzegovina</option>
+										<option value="bw">Botswana</option>
+										<option value="bv">Bouvet Island</option>
+										<option value="br">Brazil</option>
+										<option value="io">British Indian Ocean Territory</option>
+										<option value="bn">Brunei Darussalam</option>
+										<option value="bg">Bulgaria</option>
+										<option value="bf">Burkina Faso</option>
+										<option value="bi">Burundi</option>
+										<option value="kh">Cambodia</option>
+										<option value="cm">Cameroon</option>
+										<option value="ca">Canada</option>
+										<option value="cv">Cape Verde</option>
+										<option value="cb">Caribbean Nations</option>
+										<option value="ky">Cayman Islands</option>
+										<option value="cf">Central African Republic</option>
+										<option value="td">Chad</option>
+										<option value="cl">Chile</option>
+										<option value="cn">China</option>
+										<option value="cx">Christmas Island</option>
+										<option value="cc">Cocos (Keeling) Islands</option>
+										<option value="co">Colombia</option>
+										<option value="km">Comoros</option>
+										<option value="cg">Congo</option>
+										<option value="ck">Cook Islands</option>
+										<option value="cr">Costa Rica</option>
+										<option value="ci">Cote D'Ivoire (Ivory Coast)</option>
+										<option value="hr">Croatia</option>
+										<option value="cu">Cuba</option>
+										<option value="cy">Cyprus</option>
+										<option value="cz">Czech Republic</option>
+										<option value="cd">Democratic Republic of the Congo</option>
+										<option value="dk">Denmark</option>
+										<option value="dj">Djibouti</option>
+										<option value="dm">Dominica</option>
+										<option value="do">Dominican Republic</option>
+										<option value="tp">East Timor</option>
+										<option value="ec">Ecuador</option>
+										<option value="eg">Egypt</option>
+										<option value="sv">El Salvador</option>
+										<option value="gq">Equatorial Guinea</option>
+										<option value="er">Eritrea</option>
+										<option value="ee">Estonia</option>
+										<option value="et">Ethiopia</option>
+										<option value="fk">Falkland Islands (Malvinas)</option>
+										<option value="fo">Faroe Islands</option>
+										<option value="fm">Federated States of Micronesia</option>
+										<option value="fj">Fiji</option>
+										<option value="fi">Finland</option>
+										<option value="fr">France</option>
+										<option value="gf">French Guiana</option>
+										<option value="pf">French Polynesia</option>
+										<option value="tf">French Southern Territories</option>
+										<option value="ga">Gabon</option>
+										<option value="gm">Gambia</option>
+										<option value="ge">Georgia</option>
+										<option value="de">Germany</option>
+										<option value="gh">Ghana</option>
+										<option value="gi">Gibraltar</option>
+										<option value="gr">Greece</option>
+										<option value="gl">Greenland</option>
+										<option value="gd">Grenada</option>
+										<option value="gp">Guadeloupe</option>
+										<option value="gu">Guam</option>
+										<option value="gt">Guatemala</option>
+										<option value="gg">Guernsey</option>
+										<option value="gn">Guinea</option>
+										<option value="gw">Guinea-Bissau</option>
+										<option value="gy">Guyana</option>
+										<option value="ht">Haiti</option>
+										<option value="hm">Heard Island and McDonald Islands</option>
+										<option value="hn">Honduras</option>
+										<option value="hk">Hong Kong</option>
+										<option value="hu">Hungary</option>
+										<option value="is">Iceland</option>
+										<option value="in">India</option>
+										<option value="id">Indonesia</option>
+										<option value="ir">Iran</option>
+										<option value="iq">Iraq</option>
+										<option value="ie">Ireland</option>
+										<option value="im">Isle of Man</option>
+										<option value="il">Israel</option>
+										<option value="it">Italy</option>
+										<option value="jm">Jamaica</option>
+										<option value="jp">Japan</option>
+										<option value="je">Jersey</option>
+										<option value="jo">Jordan</option>
+										<option value="kz">Kazakhstan</option>
+										<option value="ke">Kenya</option>
+										<option value="ki">Kiribati</option>
+										<option value="kr">Korea</option>
+										<option value="kp">Korea (North)</option>
+										<option value="ko">Kosovo</option>
+										<option value="kw">Kuwait</option>
+										<option value="kg">Kyrgyzstan</option>
+										<option value="la">Laos</option>
+										<option value="lv">Latvia</option>
+										<option value="lb">Lebanon</option>
+										<option value="ls">Lesotho</option>
+										<option value="lr">Liberia</option>
+										<option value="ly">Libya</option>
+										<option value="li">Liechtenstein</option>
+										<option value="lt">Lithuania</option>
+										<option value="lu">Luxembourg</option>
+										<option value="mo">Macao</option>
+										<option value="mk">Macedonia</option>
+										<option value="mg">Madagascar</option>
+										<option value="mw">Malawi</option>
+										<option value="my">Malaysia</option>
+										<option value="mv">Maldives</option>
+										<option value="ml">Mali</option>
+										<option value="mt">Malta</option>
+										<option value="mh">Marshall Islands</option>
+										<option value="mq">Martinique</option>
+										<option value="mr">Mauritania</option>
+										<option value="mu">Mauritius</option>
+										<option value="yt">Mayotte</option>
+										<option value="mx">Mexico</option>
+										<option value="md">Moldova</option>
+										<option value="mc">Monaco</option>
+										<option value="mn">Mongolia</option>
+										<option value="me">Montenegro</option>
+										<option value="ms">Montserrat</option>
+										<option value="ma">Morocco</option>
+										<option value="mz">Mozambique</option>
+										<option value="mm">Myanmar</option>
+										<option value="na">Namibia</option>
+										<option value="nr">Nauru</option>
+										<option value="np">Nepal</option>
+										<option value="nl">Netherlands</option>
+										<option value="an">Netherlands Antilles</option>
+										<option value="nc">New Caledonia</option>
+										<option value="nz">New Zealand</option>
+										<option value="ni">Nicaragua</option>
+										<option value="ne">Niger</option>
+										<option value="ng">Nigeria</option>
+										<option value="nu">Niue</option>
+										<option value="nf">Norfolk Island</option>
+										<option value="mp">Northern Mariana Islands</option>
+										<option value="no">Norway</option>
+										<option value="pk">Pakistan</option>
+										<option value="pw">Palau</option>
+										<option value="ps">Palestinian Territory</option>
+										<option value="pa">Panama</option>
+										<option value="pg">Papua New Guinea</option>
+										<option value="py">Paraguay</option>
+										<option value="pe">Peru</option>
+										<option value="ph">Philippines</option>
+										<option value="pn">Pitcairn</option>
+										<option value="pl">Poland</option>
+										<option value="pt">Portugal</option>
+										<option value="pr">Puerto Rico</option>
+										<option value="qa">Qatar</option>
+										<option value="re">Reunion</option>
+										<option value="ro">Romania</option>
+										<option value="ru">Russian Federation</option>
+										<option value="rw">Rwanda</option>
+										<option value="gs">S. Georgia and S. Sandwich Islands</option>
+										<option value="sh">Saint Helena</option>
+										<option value="kn">Saint Kitts and Nevis</option>
+										<option value="lc">Saint Lucia</option>
+										<option value="pm">Saint Pierre and Miquelon</option>
+										<option value="vc">Saint Vincent and the Grenadines</option>
+										<option value="ws">Samoa</option>
+										<option value="sm">San Marino</option>
+										<option value="st">Sao Tome and Principe</option>
+										<option value="sa">Saudi Arabia</option>
+										<option value="sn">Senegal</option>
+										<option value="rs">Serbia</option>
+										<option value="cs">Serbia and Montenegro</option>
+										<option value="sc">Seychelles</option>
+										<option value="sl">Sierra Leone</option>
+										<option value="sg">Singapore</option>
+										<option value="sk">Slovak Republic</option>
+										<option value="si">Slovenia</option>
+										<option value="sb">Solomon Islands</option>
+										<option value="so">Somalia</option>
+										<option value="za">South Africa</option>
+										<option value="ss">South Sudan</option>
+										<option value="es">Spain</option>
+										<option value="lk">Sri Lanka</option>
+										<option value="sd">Sudan</option>
+										<option value="om">Sultanate of Oman</option>
+										<option value="sr">Suriname</option>
+										<option value="sj">Svalbard and Jan Mayen</option>
+										<option value="sz">Swaziland</option>
+										<option value="se">Sweden</option>
+										<option value="ch">Switzerland</option>
+										<option value="sy">Syria</option>
+										<option value="tw">Taiwan</option>
+										<option value="tj">Tajikistan</option>
+										<option value="tz">Tanzania</option>
+										<option value="th">Thailand</option>
+										<option value="tl">Timor-Leste</option>
+										<option value="tg">Togo</option>
+										<option value="tk">Tokelau</option>
+										<option value="to">Tonga</option>
+										<option value="tt">Trinidad and Tobago</option>
+										<option value="tn">Tunisia</option>
+										<option value="tr">Turkey</option>
+										<option value="tm">Turkmenistan</option>
+										<option value="tc">Turks and Caicos Islands</option>
+										<option value="tv">Tuvalu</option>
+										<option value="ug">Uganda</option>
+										<option value="ua">Ukraine</option>
+										<option value="ae">United Arab Emirates</option>
+										<option value="gb">United Kingdom</option>
+										<option value="uy">Uruguay</option>
+										<option value="uz">Uzbekistan</option>
+										<option value="vu">Vanuatu</option>
+										<option value="va">Vatican City State (Holy See)</option>
+										<option value="ve">Venezuela</option>
+										<option value="vn">Vietnam</option>
+										<option value="vg">Virgin Islands (British)</option>
+										<option value="vi">Virgin Islands (U.S.)</option>
+										<option value="wf">Wallis and Futuna</option>
+										<option value="eh">Western Sahara</option>
+										<option value="ye">Yemen</option>
+										<option value="zm">Zambia</option>
+										<option value="zw">Zimbabwe</option>
+										<option value="oo">Other</option>
+									</select>
+								</div>
+							</td>
+							<td width="4%">
+							</td>
+							<td colspan="1">
+								<div id="postal-code-field" class="payment-field">
+									<label for="postal-code-value" style="font-size: 15px;">Billing Postal Code <span class="asterisk">&#42;</span></label>
+									<input type="text" id="postal-code-value" name="postal-code-value" class="payment-field-input">
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		$('.background-div').on('click', function() {
+			$('.background-div').each(function(i) {
+				$(this).css('background', '#F8F9FB');
+				$(this).children('.job-post-option').css('background', '#F8F9FB');
+			});
+			$(this).css('background', '#00A0DC');
+			$(this).children('.job-post-option').css('background', 'white');
+			
+			var d = new Date();
+			$('#job-posting-credits-expiration').css('visibility', 'visible');
+			$('#job-posting-credits-expiration').text("Job posting expires " + d.getMonth() + "/" + d.getUTCDate() + "/" + d.getUTCFullYear() + 
+					". All unused job credits will expire on " + d.getMonth() + "/" + d.getUTCDate() + "/" + d.getUTCFullYear() + ".");
+		});
+		
+		$('#sponsor-job-checkbox').on('click', function() {
+			if( $('#sponsor-job').prop('class') == 'form-enabled' ) {
+				$('#sponsor-job').prop('class', 'form-disabled');
+				$('.textbox-enabled').prop('disabled', true);
+				$('.textbox-enabled').prop('class', 'textbox-disabled');
+				$('#order-summary-sponsored-job-value').text('$0.00');
+				
+				updateOrderSummary();
+			} else {
+				$('#sponsor-job').prop('class', 'form-enabled');
+				$('.textbox-disabled').prop('disabled', false);
+				$('.textbox-disabled').prop('class', 'textbox-enabled');
+				$('#order-summary-sponsored-job-value').text("$" + parseFloat($('#total-budget').val()).toFixed(2));
+				
+				updateOrderSummary();
+			}
+		});
+		
+		$('#one-job-post').on('click', function() {
+			$('#order-summary-job-posting-field').text('Job posting (1-job post)');
+			$('#order-summary-job-posting-value').text('$499.00');
+			
+			updateOrderSummary();
+		});
+		
+		$('#five-job-pack').on('click', function() {
+			$('#order-summary-job-posting-field').text('Job posting (5-job pack)');
+			$('#order-summary-job-posting-value').text('$1975.00');
+			
+			updateOrderSummary();
+		});
+		
+		$('#ten-job-pack').on('click', function() {
+			$('#order-summary-job-posting-field').text('Job posting (10-job pack)');
+			$('#order-summary-job-posting-value').text('$2950.00');
+			
+			updateOrderSummary();
+		});
+		
+		$('#use-existing-job-credits').on('click', function() {
+			$('#order-summary-job-posting-field').text('Job posting (credit)');
+			$('#order-summary-job-posting-value').text("$0.00");
+			
+			updateOrderSummary();
+		});
+		
+		$('#total-budget').on('focusout', function() {
+			$('#order-summary-sponsored-job-value').text("$" + parseFloat($('#total-budget').val()).toFixed(2));
+			
+			updateOrderSummary();
+		});
+		
+		function loadValues() {
+			var strPreviousValues = localStorage.getItem("payment_option_values");
+			
+			if( strPreviousValues != null ) {
+				var arrPreviousValues = strPreviousValues.split("*||*");
+				var strFirstName = arrPreviousValues[0];
+				var strLastName = arrPreviousValues[1];
+				var strBillingPostalCode = arrPreviousValues[3];
+				var strCardNumber = arrPreviousValues[4];
+				var strJobPostingSelected = arrPreviousValues[5];
+				var strJobPostingCost = arrPreviousValues[6];
+				var strSponsoredCost = arrPreviousValues[7];
+				var strTotalCost = arrPreviousValues[8];
+				var strCostPerClick = arrPreviousValues[9];
+				var strEmailAddress = arrPreviousValues[10];
+				var strExpirationMonth = arrPreviousValues[11];
+				var strExpirationYear = arrPreviousValues[12];
+				var strSecurityCode = arrPreviousValues[13];
+				var strBillingCountryDropdownValue = arrPreviousValues[14];
+				
+				$('#order-summary-job-posting-field').text(strJobPostingSelected);
+				$('#order-summary-job-posting-value').text(strJobPostingCost);
+				$('#order-summary-sponsored-job-value').text(strSponsoredCost);
+				$('#order-summary-item-total').text(strTotalCost);
+				$('#order-summary-estimated-total').text(strTotalCost);
+				
+				// if there is a sponsored post...
+				if( strSponsoredCost != "$0.00" ) {
+					$('#sponsor-job').prop('class', 'form-enabled');
+					$('input[id=sponsor-job-checkbox]').attr('checked', true);
+					$('.textbox-disabled').prop('disabled', false);
+					$('.textbox-disabled').prop('class', 'textbox-enabled');
+					$('#total-budget').text(strSponsoredCost.substring(1, strSponsoredCost.length));
+					$('#cost-per-click').text(strCostPerClick);
+				}
+
+				if( strJobPostingSelected.indexOf("1-job") > 0 ) {
+					$('#one-job-post-background').css('background', '#00A0DC');
+					$('#one-job-post-background').children('.job-post-option').css('background', 'white');
+				} else if( strJobPostingSelected.indexOf("5-job") > 0 ) {
+					$('#five-job-pack-background').css('background', '#00A0DC');
+					$('#five-job-pack-background').children('.job-post-option').css('background', 'white');
+				} else if( strJobPostingSelected.indexOf("10-job") > 0 ) {
+					$('#ten-job-pack-background').css('background', '#00A0DC');
+					$('#ten-job-pack-background').children('.job-post-option').css('background', 'white');
+				} else {
+					$('#existing-job-credit-background').css('background', '#00A0DC');
+					$('#existing-job-credit-background').children('.job-post-option').css('background', 'white');
+				}
+				
+				var d = new Date();
+				$('#job-posting-credits-expiration').css('visibility', 'visible');
+				$('#job-posting-credits-expiration').text("Job posting expires " + d.getMonth() + "/" + d.getUTCDate() + "/" + d.getUTCFullYear() + 
+						". All unused job credits will expire on " + d.getMonth() + "/" + d.getUTCDate() + "/" + d.getUTCFullYear() + ".");
+				
+				$('#first-name-value').val(strFirstName);
+				$('#last-name-value').val(strLastName);
+
+				$('#country-value').val(strBillingCountryDropdownValue);
+
+				$('#expiration-date-month').val(strExpirationMonth);
+				$('#expiration-date-year').val(strExpirationYear);
+				
+				$('#security-code-value').val(strSecurityCode);
+				
+				$('#postal-code-value').val(strBillingPostalCode);
+				$('#card-number-value').val(strCardNumber);
+				$('#email-value').val(strEmailAddress);
+			}
+		}
+		
+		function updateOrderSummary() {
+			var total_cost = getTotal();
+			$('#order-summary-item-total').text(total_cost);
+			$('#order-summary-estimated-total').text(total_cost);
+		}
+		
+		function getTotal() {
+			var job_posting_cost = $('#order-summary-job-posting-value').text();
+			var sponsored_job_cost = $('#order-summary-sponsored-job-value').text();
+			
+			job_posting_cost = job_posting_cost.substring(1, job_posting_cost.length);
+			sponsored_job_cost = sponsored_job_cost.substring(1, sponsored_job_cost.length);
+			
+			var total_cost = "$" + (parseFloat(job_posting_cost) + parseFloat(sponsored_job_cost)).toFixed(2);
+			
+			return total_cost;
+		}
+		
+		$('#review-order').on('click', function() {
+			var strFirstName = $('#first-name-value').val();
+			var strLastName = $('#last-name-value').val();
+			var strCountry = $('#country-value option:selected').text();
+			var strCountryDropdownValue = $('#country-value option:selected').val();
+			var strPostalCode = $('#postal-code-value').val();
+			var strCardNumber = $('#card-number-value').val();
+			var strEmailAddress = $('#email-value').val();
+			
+			strCardNumber = strCardNumber.substring(strCardNumber.length - 4, strCardNumber.length);
+			
+			var strJobPostingSelected = $('#order-summary-job-posting-field').text();
+			var strJobPostingCost = $('#order-summary-job-posting-value').text();
+			var strSponsoredCost = $('#order-summary-sponsored-job-value').text();
+			var strCostPerClick = $('#cost-per-click').val();
+			
+			var strExpirationMonth = $('#expiration-date-month').val();
+			var strExpirationYear = $('#expiration-date-year').val();
+			var strSecurityCode = $('#security-code-value').val();
+			
+			var strTotalCost = getTotal();
+			var strAllFormValues = strFirstName + "*||*" + strLastName + "*||*" 
+				+ strCountry + "*||*" + strPostalCode + "*||*" 
+				+ strCardNumber + "*||*" 
+				+ strJobPostingSelected + "*||*" + strJobPostingCost + "*||*" 
+				+ strSponsoredCost + "*||*" + strTotalCost + "*||*" + strCostPerClick + "*||*" 
+				+ strEmailAddress + "*||*" 
+				+ strExpirationMonth + "*||*" + strExpirationYear + "*||*" + strSecurityCode + "*||*" + strCountryDropdownValue;
+			
+			localStorage.setItem("payment_option_values", strAllFormValues);
+		});
+	</script>
+	
+	<div id="header" class="global-header responsive-header nav-v5-2-header responsive-1">
+		<div id="content_wrapper" class="wrapper">
+			<div id="top_bar">
+				<div class="wrapper">
+					<div class="header-section first-child">
+						<h2 class="logo-container" tabindex="0">
+							<a target="_self" class="logo" id="in-logo">
+							</a>
+						</h2>
+						<form method="get" class="global-search">
+							<fieldset style="border: none; float: left">
+								<div class="search-scope global-nav-styled-dropdown" id="control_gen_2">
+									<div class="label" style="color: #999999; font-size: 10px;">
+										<img alt="" src="hamburger_bar_icon3.png" height="22" width="18" style="padding-left: 5px; padding-top: 3px; float: left;">
+										<div style="width: 10px; float: left; padding-top: 6px; margin-left: 3px;">&#9660;</div>
+									</div>
+									<ul class="search-selector">
+										<li class="all option first selected highlighted">
+											<div>All</div>
+										</li>
+										<li class="people option">
+											<div>People</div>
+										</li>
+										<li class="jobs option">
+											<div>Jobs</div>
+										</li>
+										<li class="companies option">
+											<div>Companies</div>
+										</li>
+										<li class="groups option">
+											<div>Groups</div>
+										</li>
+										<li class="edu option">
+											<div>Universities</div>
+										</li>
+										<li class="content option">
+											<div>Posts</div>
+										</li>
+										<li class="inbox option">
+											<div>Inbox</div>
+										</li>
+									</ul>
+								</div>
+								<input id="search-box-container" class="search-box-container" type="text">
+								<button name="search" value="Search" class="search-button" type="submit">
+									<img alt="" src="search_icon.png" height="16" width="16" style="padding-top: 5px">
+								</button>
+							</fieldset>
+							<div class="advanced-search-outer">
+								<div class="advanced-search-inner">
+									<a href="" class="advanced-search" id="advanced-search">Advanced</a>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="header-section last-child">
+						<ul class="utilities">
+							<li class="utilities-tab">
+								<a href="" class="utilities-tab-item">
+									<img alt="Inbox" src="message_icon2.png">
+								</a>
+							</li>
+						</ul>
+						<ul class="utilities">
+							<li class="utilities-tab">
+								<a href="" class="utilities-tab-item">
+									<img alt="Notifications" src="notifications_icon2.png">
+								</a>
+							</li>
+						</ul>
+						<ul class="utilities">
+							<li class="utilities-tab">
+								<a href="" class="utilities-tab-item">
+									<img alt="Grow Network" src="grow_network_icon2.png">
+								</a>
+							</li>
+						</ul>
+						<ul class="utilities">
+							<li class="utilities-tab">
+								<a href="" class="utilities-tab-item">
+									<img alt="My Account" src="account_icon.png">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="responsive-nav">
+			<div class="wrapper">
+				<nav class="menu">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li>Profile&nbsp;<span class="arrow">&#9662;</span>
+							<ul style="width: 200px;">
+								<li><a href="#">Edit Profile</a></li>
+								<li><a href="#">Who's Viewed Your Profile</a></li>
+								<li><a href="#" style="padding-bottom: 8px;">Your Updates</a></li>
+							</ul>
+						</li>
+						<li>My Network&nbsp;<span class="arrow">&#9662;</span>
+							<ul>
+								<li><a href="#">Connections</a></li>
+								<li><a href="#">Add Contacts</a></li>
+								<li><a href="#">People You May Know</a></li>
+								<li><a href="#" style="padding-bottom: 8px;">Find Alumni</a></li>
+							</ul>
+						</li>
+						<li><a href="LMSearchForJobs.html">Jobs</a></li>
+						<li>Interests&nbsp;<span class="arrow">&#9662;</span>
+							<ul>
+								<li><a href="#">Companies</a></li>
+								<li><a href="#">Groups</a></li>
+								<li><a href="#">Pulse</a></li>
+								<li><a href="#">Education</a></li>
+								<li><a href="#">SlideShare</a></li>
+								<li><a href="#" style="padding-bottom: 8px;">Online Learning</a></li>
+							</ul>
+						</li>
+						<li>Business Services&nbsp;<span class="arrow">&#9662;</span>
+							<ul style="width: 150px">
+								<li><a href="#">Post a Job</a></li>
+								<li><a href="#">Talent Solutions</a></li>
+								<li><a href="#">Advertise</a></li>
+								<li><a href="#" style="padding-bottom: 10px;">Sales Solutions</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

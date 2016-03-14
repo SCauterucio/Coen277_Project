@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+  <link rel="stylesheet" type="text/css" href="LinkedInMainFormatting.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="LinkedInMainJS.js"></script>
+<meta charset="ISO-8859-1">
+<title>LinkedIn Makeover: Post a Job - Select Option</title>
+	<style type="text/css">
+		#billing-content {
+			margin: 10px 15px 15px 15px;
+		}
+	
+		#notification {
+			font-size: 12px;
+			color: #AAAAAA;
+			margin-bottom: 25px;
+		}
+	
+		#billing-address-info, #payment-detail-and-button {
+			line-height: 1.2;
+			font-size: 15px;
+			position: relative;
+			float: left;
+		}
+		
+		#payment-detail-and-button {
+			margin-left: 60px;
+		}
+		
+		.btn-primary {
+			font-weight: bold;
+			border-width: 1px;
+			border-style: solid;
+			cursor: pointer;
+			margin: 0;
+			overflow: visible;
+			text-decoration: none !important;
+			width: auto;
+			text-shadow: 0 1px 1px rgba(0,0,0,0.35);
+			border-radius: 3px;
+			padding: 0 13px;
+			height: 31px;
+			line-height: 29px;
+			box-sizing: border-box;
+			font-size: 13px;
+			background-color: #287bbc;
+			border-color: #1b5480;
+			background-image: -webkit-linear-gradient(top, #287bbc 0%, #2369a 100%);
+			white-space: nowrap;
+			display: inline-block;
+			zoom: 1;
+			vertical-align: middle;
+		}
+		
+		#changeOrderDetails, #previewJob {
+			text-shadow: 0 1px 1px rgba(255,255,255, 0.75);
+			font-size: 13px;
+			border-color: #a7a7a7;
+			background-image: -webkit-linear-gradient(top, #f2f2f2 0%, #e9e9e9 32%, #d8d8d8 74%, #d1d1d1 100%);
+			background-image: -o-linear-gradient(top, #f2f2f2 0%, #e9e9e9 32%, #d8d8d8 74%, #d1d1d1 100%);
+			background-image: -moz-linear-gradient(top, #f2f2f2 0%, #e9e9e9 32%, #d8d8d8 74%, #d1d1d1 100%);
+			background-image: linear-gradient(top, #f2f2f2 0%, #e9e9e9 32%, #d8d8d8 74%, #d1d1d1 100%);
+			white-space: nowrap;
+			zoom: 1;
+			vertical-align: middle;
+			color: #444;
+			border-color: #a7a7a7;
+			margin-top: 30px;
+		}
+		
+		#changeOrderDetails:hover, #previewJob:hover {
+			color: #444;
+			background-image: -webkit-linear-gradient(top, #e4e4e4, #b7b7b7);
+		}
+
+		.place-order {
+			font-weight: bold;
+			border-width: 1px;
+			border-style: solid;
+			cursor: pointer;
+			margin: 0;
+			overflow: visible;
+			text-decoration: none !important;
+			width: auto;
+			text-shadow: 0 1px 1px rgba(0,0,0,0.35);
+			border-radius: 3px;
+			padding: 0 10px;
+			height: 31px;
+			line-height: 30px;
+			box-sizing: border-box;
+			font-size: 13px;
+			color: #fff;
+			border-color: #1b5480;
+			background-image: -webkit-linear-gradient(top, #287bbc 0%, #23639a 100%);
+			background-image: -moz-linear-gradient(top, #287bbc 0%, #23639a 100%);
+			background-image: -o-linear-gradient(top, #287bbc 0%, #23639a 100%);
+			background-image: linear-gradient(top, #287bbc 0%, #23639a 100%);
+			white-space: nowrap;
+			display: inline-block;
+			zoom: 1;
+			vertical-align: middle;
+		}
+
+		.place-order:hover {
+			color: #fff;
+			background-image: -webkit-linear-gradient(top, #287bbc 0%, #1E4F7E 100%);
+			border-color: #004a73;
+			box-shadow: 0 3px 2px -2px #D0D0D0;
+		}
+
+		.form-controls {
+			float: left;
+			clear: left;
+			width: 335px;
+			margin-top: 15px;
+			text-align: center;
+		}
+		
+		#order-summary-results {
+			border: none;
+			border-collapse: collapse;
+			margin-left: 20px;
+			margin-top: 20px;
+			font-size: 14px;
+			width: 315px;
+		}
+		
+		#order-summary-results tr .order-summary-detail-item {
+			text-align: right;
+		}
+		
+		#faqs-link, #faqs-link:visited, #privacy-notice, #privacy-notice:visited, #terms-and-conditions, #terms-and-conditions:visited {
+			text-decoration: underline;
+			color: #3F48CC;
+		}
+		
+		#faqs-link:hover, #privacy-notice:hover, #terms-and-conditions:hover {
+			color: #008cc9;
+		}
+		
+		#customer-support-email-link, #customer-support-email-link:visited {
+			color: #008cc9;
+			text-decoration: underline;
+		}
+		
+		#customer-support-email-link:hover {
+			color: #3F48CC;
+		}
+		
+		#job-title, #modal-job-title {
+			font-size: 28px;
+		}
+		
+		.job-description-highlights, .modal-job-description-highlights {
+			border-radius: 25px;
+			border: 1px solid #DDDDDD;
+			background-color: #F8F8F8;
+			margin-top: 25px;
+			font-size: 12px;
+			padding: 15px 15px 15px 15px;
+		}
+		
+		.job-description-details, .modal-job-description-details {
+			margin-top: 25px;
+			font-size: 12px;
+			padding-bottom: 20px;
+			border-bottom: 1px solid #DDDDDD;
+		}
+		
+		.job-description-field-name, .modal-field-name {
+			padding-right: 15px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body class="cd-fixed-bg" onload="getFormValues()">
+	<div style="width: 984px; background-color: transparent; position: absolute; left: 24%; top: 100px; margin-bottom: 60px;">
+		<div style="position: relative; float: left; width: 525px;">
+			<div style="width: 525px; display: inline-block; background-color: white; padding-bottom: 20px;">
+				<div class="mod srp-title" style="background-color: transparent; width: 500px;">
+					<h2>Review Your Order</h2>
+				</div>
+				<div id="billing-content">
+					<div id="notification">
+						Before placing your order, please review our <a id="privacy-notice" href="https://www.linkedin.com/legal/privacy-policy" target="_blank">privacy notice</a> and <a id="terms-and-conditions" href="https://www.linkedin.com/legal/user-agreement" target="_blank">terms and conditions</a> of use.
+					</div>
+					<div id="billing-address-info">
+						<div style="font-weight: bold; color: #777777; margin-bottom: 10px;">
+							Billing Address
+						</div>
+						<div id="billing-details">
+							Name of purchaser<br>
+							Country, Postal Code<br>
+							email-address<br>
+						</div>
+						<a href="LMPostAJobCheckout.html" class="btn-primary" id="changeOrderDetails">Change Order Details</a>
+					</div>
+				</div>
+				<div id="payment-detail-and-button">
+					<div style="font-weight: bold; color: #777777; margin-bottom: 10px;">
+						Payment Information
+					</div>
+					<div id="card-details">Card ending in *-xxxx</div>
+				</div>
+			</div>
+			<div style="width: 525px; display: inline-block; background-color: white; padding-bottom: 20px; margin-top: 15px;">
+				<div class="mod srp-title" style="background-color: transparent; width: 500px;">
+					<h2 style="background-color: #BBBBBB;">Job Description - Snapshot</h2>
+				</div>
+				<div style="margin: 15px;" class="job-description-highlights">
+					<div id="job-title">
+						Software Developer
+					</div>
+					<div id="job-description-company-and-location" style="margin-bottom: 5px; font-size: 15px;">
+						Company - Location
+					</div>
+					<table style="border:none; margin-top: 10px;">
+						<tr>
+							<td class="job-description-field-name">Job Location(s):</td>
+							<td id="job-description-job-location">Locations goes here</td>
+						</tr>
+						<tr>
+							<td class="job-description-field-name">Employment Type:</td>
+							<td id="job-description-employment-type">Employment type goes here</td>
+						</tr>
+						<tr>
+							<td class="job-description-field-name">Experience Level:</td>
+							<td id="job-description-experience-level">Experience level goes here</td>
+						</tr>
+						<tr>
+							<td class="job-description-field-name">Job Functions:</td>
+							<td id="job-description-job-functions">Job function goes here</td>
+						</tr>
+						<tr>
+							<td class="job-description-field-name">Industries:</td>
+							<td id="job-description-industries">Industries list goes here</td>
+						</tr>
+					</table>
+				</div>
+				<a href="#" class="btn-primary" id="previewJob" data-toggle="modal" data-target="#jobPreviewModal" style="margin-left: 15px;">Preview Full Job Description</a>
+				
+				<script type="text/javascript">
+					// Get the modal
+					var modal = document.getElementById('jobPreviewModal');
+					
+					// Get the <span> element that closes the modal
+					var span = document.getElementsByClassName("close")[0];
+					
+					// When the user clicks on the button, open the modal
+					$('#previewJob').on('click', function() {
+					    modal.style.display = "block";
+					});
+					
+					// When the user clicks on <span> (x), close the modal
+					span.onclick = function() {
+					    modal.style.display = "none";
+					}
+
+					// When the user clicks anywhere outside of the modal, close it
+					window.onclick = function(event) {
+					    if (event.target == modal) {
+					        modal.style.display = "none";
+					    }
+					}
+				</script>
+				
+				<div id="jobPreviewModal" class="modal">
+					<div class="modal-content">
+						<div class="modal-header">
+							<span style="margin-top: 10px;" class="close" id="close-preview">x</span>
+							<div style="padding-top: 10px; padding-bottom: 10px; font-weight: normal; font-size: 15px;">Job Description Preview</div>
+						</div>
+						<div class="modal-body">
+							<div class="modal-job-description-highlights">
+								<div style="margin: 15px;">
+									<div id="modal-job-title" class="modal-job-description-highlight-item" style="font-size: 28px;">
+										Software Developer
+									</div>
+									<div id="modal-company-and-location" style="margin-bottom: 5px; font-size: 15px;">
+										Company - Location
+									</div>
+									<table style="border:none; margin-top: 10px;">
+										<tr>
+											<td class="modal-field-name">Job Location(s):</td>
+											<td id="modal-job-location">Locations goes here.</td>
+										</tr>
+										<tr>
+											<td class="modal-field-name">Employment Type:</td>
+											<td id="modal-employment-type">Employment type goes here</td>
+										</tr>
+										<tr>
+											<td class="modal-field-name">Experience Level:</td>
+											<td id="modal-experience-level">Experience level goes here</td>
+										</tr>
+										<tr>
+											<td class="modal-field-name">Job Functions:</td>
+											<td id="modal-job-functions">Job function goes here</td>
+										</tr>
+										<tr>
+											<td class="modal-field-name">Industries:</td>
+											<td id="modal-industries">Industries list goes here</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<div class="modal-job-description-details">
+								<div style="margin-left: 15px; margin-right: 15px;">
+									<p><b>Job Description</b></p>
+									<div id="modal-job-description-information">
+										The job description from the form will go here.
+									</div>
+								</div>
+							</div>
+							<div class="modal-job-description-details" style="border: none; padding-bottom: 30px">
+								<div style="margin-left: 15px; margin-right: 15px;">
+									<p><b>Company Description</b></p>
+									<div id="modal-company-description">
+										Information about the company to which this job is being posted for will appear here (this assumes we already have a database with the company information!).
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<script>
+					$('#close-preview').on('click', function() {
+						$('#jobPreviewModal').modal('toggle');
+					});
+				</script>
+			</div>
+		</div>
+		<div style="position: relative; float: left; width: 415px; margin-left: 35px; background-color: white; padding-bottom: 20px;">
+			<div style="width: 355px; height: 350px; margin-top: 20px; margin-left: 30px; margin-right: 30px; border: 1px solid #D9D9D9; border-radius: 8px;">
+				<div style="font-size: 18px; font-weight: bold; margin-top: 20px; text-align: center;">Your order summary</div>
+				<table id="order-summary-results">
+					<tr style="background-color: #EEEEEE; border: 1px solid #EEEEEE; border-collapse: collapse;">
+						<td width="85%" style="border: 1px solid #EEEEEE; border-collapse: collapse">Descriptions</td>
+						<td width="15%" style="border: 1px solid #EEEEEE; border-collapse: collapse; text-align: center;">Amount</td>
+					</tr>
+					<tr>
+						<td style="padding-top: 10px;"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td id="order-summary-job-posting-field" style="padding-bottom: 5px;">Job posting</td>
+						<td class="order-summary-detail-item" id="order-summary-job-posting-value">$0.00</td>
+					</tr>
+					<tr>
+						<td id="order-summary-sponsored-job-field">Sponsored job* (maximum allowance)</td>
+						<td class="order-summary-detail-item" id="order-summary-sponsored-job-value">$0.00</td>
+					</tr>
+					<tr style="border-bottom: 2px solid #D9D9D9; ">
+						<td style="padding-top: 10px;"></td>
+						<td></td>
+					</tr>
+					<tr class="order-summary-detail-item">
+						<td style="padding-top: 10px"></td>
+					</tr>
+					<tr style="font-weight: bold">
+						<td>Item Subtotal</td>
+						<td class="order-summary-detail-item" id="order-summary-item-total" style="padding-bottom: 5px;">$0.00</td>
+					</tr>
+					<tr>
+						<td>Tax</td>
+						<td class="order-summary-detail-item">$0.00</td>
+					</tr>
+					<tr style="border-bottom: 2px solid #D9D9D9;">
+						<td style="padding-top: 10px;"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td style="padding-top: 10px"></td>
+						<td></td>
+					</tr>
+					<tr style="font-weight: bold; font-size: 16px;">
+						<td style="text-align: right; padding-right: 20px;">Estimated Total</td>
+						<td class="order-summary-detail-item" id="order-summary-estimated-total">$0.00</td>
+					</tr>
+					<tr style="font-size: 12px; text-align: right;">
+						<td></td>
+						<td>(in USD)</td>
+					</tr>
+				</table>
+				<div style="border: 1px solid #D9D9D9; border-radius: 8px; background-color: #F7F7F7; margin-top: 30px;">
+					<div style="font-color: #AAAAAA; font-size: 12px; margin: 15px 15px 15px 15px; line-height: 1.4">
+						* You will not be charged any amount until someone clicks on your sponsored ad. Please see <a href="#" id="faqs-link" data-toggle="modal" data-target="#faqs-modal">FAQs &#187;</a> for more details.
+						<script type="text/javascript">
+							// Get the modal
+							var modal = document.getElementById('faqs-modal');
+		
+							// Get the <span> element that closes the modal
+							var span = document.getElementsByClassName("close")[0];
+		
+							// When the user clicks on the button, open the modal
+							$('#faqs-link').on('click', function() {							    
+							    modal.style.display = "block";
+							});
+		
+							// When the user clicks on <span> (x), close the modal
+							span.onclick = function() {
+							    modal.style.display = "none";
+							}
+		
+							// When the user clicks anywhere outside of the modal, close it
+							window.onclick = function(event) {
+							    if (event.target == modal) {
+							        modal.style.display = "none";
+							    }
+							}
+						</script>
+						
+						<div id="faqs-modal" class="modal">
+							<div class="modal-content">
+								<div class="modal-header">
+									<span style="margin-top: 10px;" class="close" id="close-faqs">x</span>
+									<div style="padding-top: 10px; padding-bottom: 10px; font-weight: normal; font-size: 15px;">Frequently Asked Questions</div>
+								</div>
+								<div class="modal-body" style="margin-top: 30px;">
+										<div style="margin-bottom: 30px;">
+											<div style="margin-bottom: 10px;"><b>Who can see my job post?</b></div>
+											We'll share your job across LinkedIn and through email to professionals whose skills and location match the job. Anyone on LinkedIn can find your post through search, and if you have a Company Page, it will appear there, too. You can also share your job via social media.
+										</div>
+										<div style="margin-bottom: 30px;">
+											<div style="margin-bottom: 10px;"><b>Will I get a copy of the receipt?</b></div>
+											You'll get an email receipt and you can also print your billing history from your Settings page.
+										</div>
+										<div style="margin-bottom: 30px;">
+											<div style="margin-bottom: 10px;"><b>How long will my job post be active, and can I renew it?</b></div>
+											Job posts are live for 30 days once they're posted. You can renew your job at any time, which will extend the expiration date by 30 days and update the posting date to the renewal date. Renewals cost the same as a new job post.
+										</div>
+										<div style="margin-bottom: 30px;">
+											<div style="margin-bottom: 10px;"><b>Can I close my job post if I fill the position before the job post expires?</b></div>
+											Yes, you can close your job post at any time before it expires. It will then be removed from search results, and while it can't be reopened, it can be reposted.
+										</div>
+										<div style="margin-bottom: 30px;">
+											<div style="margin-bottom: 10px;"><b>Can I edit my job post after it has been posted?</b></div>
+											Yes, once a job is posted, you can make edits to it from the Manage Jobs page. You can change any field, except for the location, which can't be changed once it's posted.
+										</div>
+										<div style="margin-bottom: 30px">
+											<div style="margin-bottom: 10px;"><b>How will I get an applicant's information when they apply for my job?</b></div>
+											When you post a job, you can select how you want to receive applicant information. You can collect it on LinkedIn and get email updates with new applicants. Or, you can route applicants to an external website to apply, such as your career site or ATS.
+										</div>
+								</div>
+								<div class="modal-footer" style="font-size: 18px; color:#008cc9; background-color: #F8F8F8; padding-top: 20px; padding-bottom: 20px;">
+									Have more questions? Send us an e-mail at <a href="#" id="customer-support-email-link">customersupport@linkedin.com</a>!&nbsp;&nbsp;&nbsp;<img alt="" src="email.png">
+								</div>
+							</div>
+						</div>
+						
+						<script>
+							$('#close-faqs').on('click', function() {
+								$('#faqs-modal').modal('toggle');
+							});
+						</script>
+					</div>
+				</div>
+				<div id="agreement" style="float: left; position: relative; margin-top: 30px; font-weight: bold; font-size: 13px; color: #777777;">
+					<input type="checkbox" id="agreement-conditions" name="agreement-conditions" style="padding-left: 15px;">
+					<label for="agreement-conditions">By clicking this box, I certify that I have read and agreed to the
+						<a href="https://www.linkedin.com/legal/privacy-policy" id="privacy-notice" target="_blank">privacy notice</a> and <a id="terms-and-conditions" href="https://www.linkedin.com/legal/user-agreement" target="_blank">terms and conditions</a> of use.</label>
+				</div> 
+				<div id="review-order" class="form-controls" style="margin-top: 40px; padding-bottom: 20px;">
+					<a href="LMPostAJobConfirmation.html" class="btn-primary place-order" id="place-order-link">Place Your Order</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		function getFormValues() {
+			var job_posting_details = localStorage.getItem("job_description_values").split("*||*");
+			var payment_details = localStorage.getItem("payment_option_values").split("*||*");
+			
+			var strCustomerFirstName = payment_details[0];
+			var strCustomerLastName = payment_details[1];
+			var strBillingCountry = payment_details[2];
+			var strBillingPostalCode = payment_details[3];
+			var strCardNumber = payment_details[4];
+			var strJobPostingSelected = payment_details[5];
+			var strJobPostingCost = payment_details[6];
+			var strSponsoredPost = payment_details[7];
+			var strTotalCost = payment_details[8];
+			var strEmailAddress = payment_details[10];
+			
+			$('#billing-details').html(strCustomerFirstName + " " + strCustomerLastName + "<br>" + strBillingCountry + ", " + strBillingPostalCode + "<br><font style=\"text-decoration: underline\">" + strEmailAddress + "</font>");
+			$('#card-details').text('Card ending in *-' + strCardNumber);
+			
+			$('#order-summary-job-posting-field').text(strJobPostingSelected);
+			$('#order-summary-job-posting-value').text(strJobPostingCost);
+			$('#order-summary-sponsored-job-value').text(strSponsoredPost);
+			$('#order-summary-item-total').text(strTotalCost);
+			$('#order-summary-estimated-total').text(strTotalCost);
+			
+			var companyName = job_posting_details[0];
+			var jobTitle = job_posting_details[1];
+			var employmentType = job_posting_details[2];
+			var experienceLevel = job_posting_details[3];
+			var jobDescription = job_posting_details[4];
+			var jobFunctions = job_posting_details[5];
+			var industries = job_posting_details[6];
+			var postalCodes = job_posting_details[7];
+			
+			$('#job-description-job-location').text(postalCodes);
+			$('#job-description-employment-type').text(employmentType);
+			$('#job-description-experience-level').text(experienceLevel);
+			$('#job-description-job-functions').text(jobFunctions);
+			$('#job-description-industries').text(industries);
+			
+		    $("#modal-job-title").text(jobTitle);
+		    $("#modal-company-and-location").html(companyName);
+		    $("#modal-job-location").text(postalCodes);
+		    $("#modal-employment-type").text(employmentType);
+		    $("#modal-experience-level").text(experienceLevel);
+		    $("#modal-job-functions").text(jobFunctions);
+		    $("#modal-industries").text(industries);
+		    $("#modal-job-description-information").html(jobDescription);
+		}
+	</script>
+	
+	<div id="header" class="global-header responsive-header nav-v5-2-header responsive-1">
+		<div id="content_wrapper" class="wrapper">
+			<div id="top_bar">
+				<div class="wrapper">
+					<div class="header-section first-child">
+						<h2 class="logo-container" tabindex="0">
+							<a target="_self" class="logo" id="in-logo">
+							</a>
+						</h2>
+						<form method="get" class="global-search">
+							<fieldset style="border: none; float: left">
+								<div class="search-scope global-nav-styled-dropdown" id="control_gen_2">
+									<div class="label" style="color: #999999; font-size: 10px;">
+										<img alt="" src="hamburger_bar_icon3.png" height="22" width="18" style="padding-left: 5px; padding-top: 3px; float: left;">
+										<div style="width: 10px; float: left; padding-top: 6px; margin-left: 3px;">&#9660;</div>
+									</div>
+									<ul class="search-selector">
+										<li class="all option first selected highlighted">
+											<div>All</div>
+										</li>
+										<li class="people option">
+											<div>People</div>
+										</li>
+										<li class="jobs option">
+											<div>Jobs</div>
+										</li>
+										<li class="companies option">
+											<div>Companies</div>
+										</li>
+										<li class="groups option">
+											<div>Groups</div>
+										</li>
+										<li class="edu option">
+											<div>Universities</div>
+										</li>
+										<li class="content option">
+											<div>Posts</div>
+										</li>
+										<li class="inbox option">
+											<div>Inbox</div>
+										</li>
+									</ul>
+								</div>
+								<input id="search-box-container" class="search-box-container" type="text">
+								<button name="search" value="Search" class="search-button" type="submit">
+									<img alt="" src="search_icon.png" height="16" width="16" style="padding-top: 5px">
+								</button>
+							</fieldset>
+							<div class="advanced-search-outer">
+								<div class="advanced-search-inner">
+									<a href="" class="advanced-search" id="advanced-search">Advanced</a>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="header-section last-child">
+						<ul class="utilities">
+							<li class="utilities-tab">
+								<a href="" class="utilities-tab-item">
+									<img alt="Inbox" src="message_icon2.png">
+								</a>
+							</li>
+						</ul>
+						<ul class="utilities">
+							<li class="utilities-tab">
+								<a href="" class="utilities-tab-item">
+									<img alt="Notifications" src="notifications_icon2.png">
+								</a>
+							</li>
+						</ul>
+						<ul class="utilities">
+							<li class="utilities-tab">
+								<a href="" class="utilities-tab-item">
+									<img alt="Grow Network" src="grow_network_icon2.png">
+								</a>
+							</li>
+						</ul>
+						<ul class="utilities">
+							<li class="utilities-tab">
+								<a href="" class="utilities-tab-item">
+									<img alt="My Account" src="account_icon.png">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="responsive-nav">
+			<div class="wrapper">
+				<nav class="menu">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li>Profile&nbsp;<span class="arrow">&#9662;</span>
+							<ul style="width: 200px;">
+								<li><a href="#">Edit Profile</a></li>
+								<li><a href="#">Who's Viewed Your Profile</a></li>
+								<li><a href="#" style="padding-bottom: 8px;">Your Updates</a></li>
+							</ul>
+						</li>
+						<li>My Network&nbsp;<span class="arrow">&#9662;</span>
+							<ul>
+								<li><a href="#">Connections</a></li>
+								<li><a href="#">Add Contacts</a></li>
+								<li><a href="#">People You May Know</a></li>
+								<li><a href="#" style="padding-bottom: 8px;">Find Alumni</a></li>
+							</ul>
+						</li>
+						<li><a href="LMSearchForJobs.html">Jobs</a></li>
+						<li>Interests&nbsp;<span class="arrow">&#9662;</span>
+							<ul>
+								<li><a href="#">Companies</a></li>
+								<li><a href="#">Groups</a></li>
+								<li><a href="#">Pulse</a></li>
+								<li><a href="#">Education</a></li>
+								<li><a href="#">SlideShare</a></li>
+								<li><a href="#" style="padding-bottom: 8px;">Online Learning</a></li>
+							</ul>
+						</li>
+						<li>Business Services&nbsp;<span class="arrow">&#9662;</span>
+							<ul style="width: 150px">
+								<li><a href="#">Post a Job</a></li>
+								<li><a href="#">Talent Solutions</a></li>
+								<li><a href="#">Advertise</a></li>
+								<li><a href="#" style="padding-bottom: 10px;">Sales Solutions</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
