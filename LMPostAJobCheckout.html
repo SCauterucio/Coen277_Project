@@ -881,23 +881,21 @@
 				var strFirstName = arrPreviousValues[0];
 				var strLastName = arrPreviousValues[1];
 				var strBillingPostalCode = arrPreviousValues[3];
-				var strCardNumber = arrPreviousValues[4];
 				var strJobPostingSelected = arrPreviousValues[5];
 				var strJobPostingCost = arrPreviousValues[6];
 				var strSponsoredCost = arrPreviousValues[7];
 				var strTotalCost = arrPreviousValues[8];
 				var strCostPerClick = arrPreviousValues[9];
 				var strEmailAddress = arrPreviousValues[10];
-				var strExpirationMonth = arrPreviousValues[11];
-				var strExpirationYear = arrPreviousValues[12];
-				var strSecurityCode = arrPreviousValues[13];
 				var strBillingCountryDropdownValue = arrPreviousValues[14];
-				
+
 				$('#order-summary-job-posting-field').text(strJobPostingSelected);
 				$('#order-summary-job-posting-value').text(strJobPostingCost);
 				$('#order-summary-sponsored-job-value').text(strSponsoredCost);
 				$('#order-summary-item-total').text(strTotalCost);
 				$('#order-summary-estimated-total').text(strTotalCost);
+				$('#cost-per-click').val(strCostPerClick);
+				$('#total-budget').val(strSponsoredCost.substring(1, strSponsoredCost.length));
 				
 				// if there is a sponsored post...
 				if( strSponsoredCost != "$0.00" ) {
@@ -932,14 +930,8 @@
 				$('#last-name-value').val(strLastName);
 
 				$('#country-value').val(strBillingCountryDropdownValue);
-
-				$('#expiration-date-month').val(strExpirationMonth);
-				$('#expiration-date-year').val(strExpirationYear);
-				
-				$('#security-code-value').val(strSecurityCode);
 				
 				$('#postal-code-value').val(strBillingPostalCode);
-				$('#card-number-value').val(strCardNumber);
 				$('#email-value').val(strEmailAddress);
 			}
 		}
