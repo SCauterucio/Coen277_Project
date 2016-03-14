@@ -4,7 +4,8 @@
     width: 650px;
     position: absolute;
 	top: 80px;
-	left:13%;
+	/*left:13%;*/
+	left: 24%;
 }
 
 #profile-container {
@@ -404,9 +405,8 @@ h5 {
     width: 300px;
     position: absolute;
 	top: 80px;
-	right:15%;
-	//left:53%;
-}
+	/*right:15%;
+*/left: 59.5%;}
 
 .ad, #similar-people, #endorse, #common {
 	

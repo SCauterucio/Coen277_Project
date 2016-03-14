@@ -13,7 +13,8 @@ h3 {
     width: 650px;
     position: absolute;
 	top: 80px;
-	left:13%;
+	/*left:13%;*/
+	left: 24%;
 }
 
 #identity-container {
@@ -230,7 +231,7 @@ button:hover {
     position: absolute;
 	top: 80px;
 	//right:15%;
-	left:53%;
+    left: 59.5%;
 }
 
 #right .arrow-box {
