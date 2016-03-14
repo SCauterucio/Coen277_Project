@@ -405,8 +405,76 @@ h5 {
     position: absolute;
 	top: 80px;
 	right:15%;
-	background-color:green;
-	min-height:1000px;
 }
 
+.ad, #similar-people {
+	
+	position: relative;
+	background: white;
+	margin-bottom: 20px;
+	height:auto;
 }
+.ad .ad-image {
+	
+	width:300px;
+}
+
+#similar-people h3 {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    color: #000;
+	text-align:center;
+}
+
+#similar-people ul {
+	margin:10px;
+	padding-bottom: 10px;
+
+}
+
+#similar-people li {
+	margin-top: 0px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.similar-people-photo {
+	
+	float: left;
+	padding-left: 0px;
+	padding-right: 10px;
+	height: 60px;
+	width: 60px;
+}
+
+.similar-people-photo img {
+	width:60px;
+	height:60px;
+}
+
+#similar-people li h4 {
+    overflow: hidden;
+}
+
+#similar-people li h4 a {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 17px;
+    color: #006fa6;
+    text-decoration: none;
+}
+
+#similar-people ul li p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #333;
+    font-weight: normal;
+}
+
+
+
